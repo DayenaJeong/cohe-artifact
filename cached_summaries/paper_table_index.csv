@@ -1,0 +1,19 @@
+paper_table,artifact_file,script_to_verify,description,reproduction_scope
+Main claim tiers,cached_summaries/main_claim_tiers.csv,scripts/verify_cached_summaries.py,Compact claim-tier assignments used by the audit card,Aggregate claim accounting only
+Reported results summary,cached_summaries/reported_results_summary.csv,scripts/verify_cached_summaries.py,High-level reported result summary,Aggregate claim accounting only
+Table 9,cached_summaries/table09_dependence_main.csv,scripts/verify_cached_summaries.py,Main dependence-audit numeric summary,Aggregate reported correlations
+Table 10,cached_summaries/table10_convae_check.csv,scripts/verify_cached_summaries.py,CIFAR-100 dataset-specific ConvAE reconstruction proxy audit,Aggregate reported correlations and R2 intervals
+Table 11,cached_summaries/table11_dinov2_stress.csv,scripts/verify_cached_summaries.py,DINOv2 representation-level stress test,Aggregate reported correlations and R2 means
+Table 13,cached_summaries/table13_imagenet1k_checks.csv,scripts/verify_cached_summaries.py,ImageNet-1K validation dependence and predictive checks,Aggregate reported scoring checks
+Table 15,cached_summaries/table15_predictive_validity.csv,scripts/verify_cached_summaries.py,CIFAR-100 predictive-validity split results,Aggregate reported held-out R2 values
+Table 16,cached_summaries/table16_cifar100_transfer.csv,scripts/verify_cached_summaries.py,Operational-transfer audit on CIFAR-100,Aggregate reported five-seed accuracies and deltas
+Table 17,cached_summaries/table17_resnet50_transfer.csv,scripts/verify_cached_summaries.py,Second-learner CIFAR-100 ResNet-50 transfer audit,Aggregate reported five-seed deltas
+Table 18,cached_summaries/table18_imagenet10_transfer.csv,scripts/verify_cached_summaries.py,Minimal ImageNet-10 transfer sanity check,Aggregate reported three-seed deltas
+Table 19,cached_summaries/table19_disc_hard_diagnostics.csv,scripts/verify_cached_summaries.py,Disc-Hard failure diagnostics,Aggregate coverage and concentration diagnostics
+Table 22,cached_summaries/table22_class_balanced_controls.csv,scripts/verify_cached_summaries.py,Class-balanced controls,Aggregate reported five-seed controls
+Table 25,cached_summaries/table25_cross_architecture.csv,scripts/verify_cached_summaries.py,Cross-architecture consistency of discriminative hardness,Aggregate rank correlations
+Table 26,cached_summaries/table26_shuffled_proxy.csv,scripts/verify_cached_summaries.py,Shuffled-proxy negative control,Aggregate reported null-control statistics
+Table 27,cached_summaries/table27_label_granularity.csv,scripts/verify_cached_summaries.py,Label-granularity check,Aggregate reported correlations
+Table 28,cached_summaries/table28_training_dynamics.csv,scripts/verify_cached_summaries.py,CIFAR-100 training-dynamics targets,Aggregate reported dynamics checks
+Table 29,cached_summaries/table29_epochwise_correlations.csv,scripts/verify_cached_summaries.py,Maximum epoch-wise correlations,Aggregate reported max correlations
+Table 30,cached_summaries/table30_asset_provenance.csv,scripts/verify_cached_summaries.py,Asset provenance note,Aggregate provenance table

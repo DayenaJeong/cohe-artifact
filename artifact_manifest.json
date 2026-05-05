@@ -1,0 +1,85 @@
+{
+  "artifact_name": "cohe_anonymized_artifact",
+  "version": "review-anonymized-1.1",
+  "anonymized": true,
+  "included_components": [
+    "stage-wise audit scripts",
+    "cached-summary verification scripts",
+    "CSV schemas",
+    "toy examples",
+    "reporting templates",
+    "claim tier template",
+    "cached aggregate summaries",
+    "paper table index",
+    "reproducibility documentation",
+    "claim-tier guide",
+    "FAQ",
+    "asset provenance notes",
+    "anonymity checklist",
+    "smoke tests"
+  ],
+  "excluded_components": [
+    "raw datasets",
+    "raw images",
+    "pretrained checkpoints",
+    "model weights",
+    "full raw proxy arrays",
+    "private paths",
+    "author-identifying metadata"
+  ],
+  "included_files": {
+    "documentation": [
+      "docs/REPRODUCIBILITY.md",
+      "docs/CLAIM_TIER_GUIDE.md",
+      "docs/FAQ.md"
+    ],
+    "scripts": [
+      "scripts/run_stage1_dependence.py",
+      "scripts/run_stage2_prediction.py",
+      "scripts/run_stage3_transfer_summary.py",
+      "scripts/generate_claim_card.py",
+      "scripts/verify_cached_summaries.py",
+      "scripts/render_cached_tables.py",
+      "scripts/smoke_test.sh"
+    ],
+    "cached_summaries": [
+      "cached_summaries/main_claim_tiers.csv",
+      "cached_summaries/reported_results_summary.csv",
+      "cached_summaries/paper_table_index.csv",
+      "cached_summaries/table09_dependence_main.csv",
+      "cached_summaries/table10_convae_check.csv",
+      "cached_summaries/table11_dinov2_stress.csv",
+      "cached_summaries/table13_imagenet1k_checks.csv",
+      "cached_summaries/table15_predictive_validity.csv",
+      "cached_summaries/table16_cifar100_transfer.csv",
+      "cached_summaries/table17_resnet50_transfer.csv",
+      "cached_summaries/table18_imagenet10_transfer.csv",
+      "cached_summaries/table19_disc_hard_diagnostics.csv",
+      "cached_summaries/table22_class_balanced_controls.csv",
+      "cached_summaries/table25_cross_architecture.csv",
+      "cached_summaries/table26_shuffled_proxy.csv",
+      "cached_summaries/table27_label_granularity.csv",
+      "cached_summaries/table28_training_dynamics.csv",
+      "cached_summaries/table29_epochwise_correlations.csv",
+      "cached_summaries/table30_asset_provenance.csv"
+    ]
+  },
+  "expected_inputs": [
+    "sample-indexed proxy CSV",
+    "sample-indexed discriminative-target CSV",
+    "held-out split ID CSV",
+    "optional transfer-results CSV"
+  ],
+  "data_policy": {
+    "raw_datasets": "excluded",
+    "raw_images": "excluded",
+    "pretrained_weights": "excluded",
+    "checkpoints": "excluded",
+    "full_proxy_arrays": "excluded",
+    "aggregate_cached_summaries": "included",
+    "toy_examples": "included",
+    "smoke_tests": "included"
+  },
+  "license_note": "Users must obtain upstream assets from their original sources and follow the corresponding dataset licenses, access rules, and model-card terms.",
+  "reproduction_scope": "The artifact reproduces COHE-style dependence, predictive-validity, transfer-summary, claim-card, and cached-summary verification reports from user-provided or included aggregate CSVs. It does not regenerate expensive proxy scores or retrain large models."
+}

@@ -1,0 +1,3 @@
+comparison_setting,pearson_r
+fine-grained 100-class target,-0.0841
+coarse 20-superclass target,-0.0757

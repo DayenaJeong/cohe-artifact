@@ -1,0 +1,5 @@
+evidence_block,scope,summary
+dependence,"CIFAR and ImageNet scoring audits","CE and margin associations remain weak across primary generative proxy families"
+prediction,"held-out split prediction","CE and margin held-out R2 are near zero in the reported audit"
+transfer,"CIFAR-100 retraining audits","Gen-Hard has no consistent reliable transfer across budgets; Disc-Hard can be harmful"
+stress_test,"CIFAR-100 DINOv2 isolation","first-learning shows a target-specific dynamics signal without operational-transfer evidence"

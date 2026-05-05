@@ -1,0 +1,4 @@
+column,required,description
+sample_id,yes,Stable sample identifier shared across proxy and target files
+target_name,yes,Name of the discriminative target
+target_score,yes,Scalar target value; document whether higher means harder

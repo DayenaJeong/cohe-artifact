@@ -1,0 +1,6 @@
+claim_tier,evidence_pattern,permitted_wording,not_licensed
+validated_task_surrogate,"Dependence, prediction, and transfer are consistently positive for the stated target/domain","Reliable surrogate for this target/domain","Universal proxy validity"
+weak_surrogate_evidence,"Small nonzero dependence or R2; limited or inconsistent transfer","Weak evidence; validate before use","Operational actionability without transfer evidence"
+target_specific_relation,"Signal appears for one target or dynamics definition","Target-specific relation","Unified hardness scalar"
+no_reliable_transfer,"Weak dependence, near-zero held-out R2, or unreliable downstream gain","Not a reliable surrogate in this evaluated setting","Discriminative-hardness surrogate claim"
+operational_only_effect,"Downstream gain appears without dependence or predictive-validity support","Useful policy in this protocol","Scalar-surrogate validity"

@@ -1,0 +1,5 @@
+budget,strategy,classes,class_entropy,avg_ce,top10_disc,joint_high_hardness
+0.1,Random,100,0.998,4.798,0.100,0.063
+0.1,Disc-Hard,94,0.847,5.959,1.000,0.252
+0.3,Random,100,1.000,4.793,0.099,0.063
+0.3,Disc-Hard,98,0.931,5.492,0.333,0.208

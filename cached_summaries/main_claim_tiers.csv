@@ -1,0 +1,5 @@
+use_or_target,evidence_observed,licensed_claim,recommended_action
+Gen-hard filtering,"weak CE/margin dependence; near-zero held-out R2; unreliable transfer","no reliable CE/margin transfer","do not call it a CE/margin surrogate without task-wise validation"
+GradNorm,"target-specific sensitivity associations","sensitivity channel only","validate separately before robustness or pruning claims"
+DINOv2 isolation,"first-learning signal; weak CE/margin evidence; no transfer audit","dynamics relation only","no curriculum, pruning, or filtering claim without transfer evidence"
+Disc-Hard selection,"low-budget harm; concentration diagnostics","hard-only caution","report coverage and concentration diagnostics"

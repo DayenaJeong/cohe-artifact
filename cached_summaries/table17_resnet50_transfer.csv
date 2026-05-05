@@ -1,0 +1,5 @@
+method,metric_type,budget_0_1_delta,budget_0_1_ci,budget_0_5_delta,budget_0_5_ci,budget_0_7_delta,budget_0_7_ci,cohe_reading
+Random accuracy,baseline_mean_accuracy,25.25,,52.92,,59.34,,five-seed ResNet-50 baseline mean
+Gen-Hard,delta_vs_random,0.84,"[-1.06,2.75]",0.13,"[-0.21,0.48]",0.02,"[-0.22,0.26]",no consistent reliable transfer
+Disc-Hard,delta_vs_random,-7.83,"[-8.75,-6.91]",-6.01,"[-6.77,-5.25]",-3.30,"[-3.90,-2.71]",hard-only selection harmful in this protocol
+OHS-XOR diagnostic,delta_vs_random,0.16,"[-1.21,1.52]",-0.89,"[-1.59,-0.19]",-0.22,"[-0.64,0.19]","mixed diagnostic, not a method"

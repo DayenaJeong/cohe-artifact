@@ -1,0 +1,3 @@
+column,required,description
+sample_id,yes,Stable sample identifier shared across proxy and target files
+split,yes,Use train or test for held-out prediction

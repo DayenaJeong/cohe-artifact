@@ -1,0 +1,4 @@
+target,pearson_r_mean,pearson_r_sd,spearman_rho_mean,spearman_rho_sd,heldout_linear_r2_mean,heldout_linear_r2_sd
+CE loss,0.0018,0.0029,0.0048,0.0033,-0.0005,0.0008
+Margin hardness,-0.0002,0.0046,-0.0006,0.0046,-0.0003,0.0003
+GradNorm,0.0001,0.0066,-0.0007,0.0065,-0.0002,0.0004

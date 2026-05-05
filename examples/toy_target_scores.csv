@@ -1,0 +1,9 @@
+sample_id,target_name,target_score
+s001,toy_target,0.15
+s002,toy_target,0.18
+s003,toy_target,0.35
+s004,toy_target,0.28
+s005,toy_target,0.82
+s006,toy_target,0.65
+s007,toy_target,0.92
+s008,toy_target,0.55

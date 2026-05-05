@@ -1,0 +1,5 @@
+column,required,description
+method,yes,Selection or action policy name
+budget,yes,Retained-data fraction or comparable action budget
+seed,yes,Random seed or replicate identifier
+accuracy,yes,Downstream endpoint for the evaluated protocol

@@ -1,0 +1,4 @@
+column,required,description
+sample_id,yes,Stable sample identifier shared across proxy and target files
+proxy_name,yes,Name of the task-agnostic proxy
+proxy_score,yes,Scalar proxy value; document whether higher means harder

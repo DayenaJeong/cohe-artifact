@@ -1,0 +1,9 @@
+sample_id,proxy_name,proxy_score
+s001,toy_proxy,0.10
+s002,toy_proxy,0.20
+s003,toy_proxy,0.40
+s004,toy_proxy,0.30
+s005,toy_proxy,0.80
+s006,toy_proxy,0.70
+s007,toy_proxy,0.90
+s008,toy_proxy,0.60
