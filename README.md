@@ -2,16 +2,40 @@
 
 This artifact accompanies the paper **COHE: Auditing Cross-Objective Transfer of Sample Hardness Proxies**. COHE is an evaluation and reporting protocol for checking whether a task-agnostic hardness proxy supports a stated discriminative claim.
 
+## What This Artifact Contains
+
+- Stage-wise audit scripts for dependence, held-out prediction, transfer summaries, and claim-card generation.
+- CSV schemas for proxy scores, target scores, split IDs, and transfer results.
+- Toy CSV examples for a smoke test.
+- Reporting templates for COHE audit cards, claim tiers, and checklist-style reporting.
+- Cached aggregate summaries for paper-style table verification, including DINOv2 Gate 3 accuracy, transfer-delta, diagnostic, and gate-status summaries.
+- Optional DINOv2 Gate 3 runner and aggregator scripts for users with upstream CIFAR-100 data, DINOv2 isolation scores, first-learning targets, and a seed-matched Random baseline.
+- Reviewer-facing reproducibility, claim-tier, and FAQ documentation.
+- Asset provenance and anonymity notes.
+
+## What This Artifact Does Not Contain
+
+This anonymized artifact does not redistribute CIFAR, ImageNet, pretrained checkpoints, model weights, or raw images. Users should obtain upstream assets from their original sources and follow their licenses/model cards.
+
+It also does not include full raw proxy arrays, private paths, user-specific metadata, or full historical training logs.
+
+## Quickstart
+
+From the artifact root:
+
+```bash
+bash scripts/smoke_test.sh
+```
+
+The smoke test runs all stage scripts on toy CSV files, verifies cached aggregate summaries, renders cached tables, and writes outputs under `outputs/`.
+
 ## Reviewer Quickstart
 
 ```bash
-pip install -r requirements.txt
 bash scripts/smoke_test.sh
 python scripts/verify_cached_summaries.py
 python scripts/render_cached_tables.py
 ```
-
-The smoke test uses only toy CSVs and cached aggregate summaries. CUDA is not required.
 
 Expected outputs:
 
@@ -22,24 +46,7 @@ Expected outputs:
 - `outputs/cached_summary_inventory.md`
 - `outputs/rendered_cached_tables.md`
 
-These outputs are generated locally and ignored by git.
-
-## What This Artifact Contains
-
-- Stage-wise audit scripts for dependence, held-out prediction, transfer summaries, and claim-card generation.
-- CSV schemas for proxy scores, target scores, split IDs, and transfer results.
-- Toy CSV examples for a smoke test.
-- Reporting templates for COHE audit cards, claim tiers, and checklist-style reporting.
-- Claim-tier guide and reporting templates.
-- Cached aggregate summaries for paper-style table verification.
-- Reviewer-facing reproducibility, claim-tier, and FAQ documentation.
-- Asset provenance and anonymity notes.
-
-## What This Artifact Does Not Contain
-
-This anonymized artifact does not redistribute CIFAR, ImageNet, pretrained checkpoints, model weights, or raw images. Users should obtain upstream assets from their original sources and follow their licenses/model cards.
-
-It also does not include datasets, full raw proxy arrays, private paths, user-specific metadata, or full historical training logs.
+These outputs are generated locally and are excluded from the upload ZIP.
 
 ## Expected Inputs
 
@@ -91,6 +98,30 @@ python3 scripts/render_cached_tables.py
 ```
 
 to check that the paper-table summaries are present and machine-readable.
+
+## DINOv2 Gate 3 Audit
+
+The paper's DINOv2 Gate 3 table is represented by aggregate cached files:
+
+- `cached_summaries/dinov2_gate3_transfer_summary.csv`
+- `cached_summaries/dinov2_gate3_accuracy_summary.csv`
+- `cached_summaries/dinov2_gate3_transfer_delta_summary.csv`
+- `cached_summaries/dinov2_gate3_diagnostics_summary.csv`
+- `cached_summaries/dinov2_gate3_gate_status.json`
+
+These files are aggregate summaries only. They do not include CIFAR-100 images, full proxy arrays, selected indices, checkpoints, or training logs.
+
+Users who want to rerun the full transfer audit can use:
+
+```bash
+PROXY_CSV=user_inputs/cifar100_dinov2_proxy.csv \
+FIRST_LEARNING=user_inputs/first_learning_epoch.npy \
+RANDOM_BASELINE=user_inputs/cifar100_random_seed_level_results.csv \
+DATA_ROOT=user_inputs/cifar100_data_root \
+bash scripts/run_dinov2_gate3_transfer.sh
+```
+
+Full reruns require upstream assets plus optional numerical/training dependencies such as `numpy`, `scipy`, `torch`, and `torchvision`. They are not part of the CPU-only toy smoke test or the minimal `requirements.txt`.
 
 ## Documentation Map
 

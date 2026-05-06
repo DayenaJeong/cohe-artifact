@@ -1,0 +1,21 @@
+{
+  "stage": "DINOv2 Gate 3 transfer",
+  "method_status": {
+    "DINOv2-Isolation-Easy": {
+      "declared_budgets": [
+        "0.1"
+      ],
+      "all_declared_budgets_present": true,
+      "criterion": "Gate 3 passes only if every declared budget has paired CI95 lower bound > 0 vs Random.",
+      "passes_gate3": false
+    },
+    "DINOv2-Isolation-Hard": {
+      "declared_budgets": [
+        "0.1"
+      ],
+      "all_declared_budgets_present": true,
+      "criterion": "Gate 3 passes only if every declared budget has paired CI95 lower bound > 0 vs Random.",
+      "passes_gate3": false
+    }
+  }
+}

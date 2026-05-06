@@ -23,6 +23,7 @@ This artifact does not contain datasets, raw images, pretrained weights, checkpo
 - `scripts/run_stage2_prediction.py`: fits a one-dimensional linear predictor on the train split and reports held-out R2 on the test split.
 - `scripts/run_stage3_transfer_summary.py`: summarizes method accuracy and method-vs-Random deltas by budget.
 - `scripts/generate_claim_card.py`: combines available stage summaries into a conservative draft claim card.
+- `scripts/run_dinov2_gate3_transfer.py` and `scripts/aggregate_dinov2_gate3_transfer.py`: optional full DINOv2 Gate 3 transfer rerun for users who provide upstream CIFAR-100 data, DINOv2 scores, first-learning targets, seed-matched Random baselines, and PyTorch/torchvision dependencies.
 
 ## Toy Examples
 
@@ -39,6 +40,8 @@ Outputs are written under `outputs/`, which is excluded from the upload ZIP.
 ## Cached Aggregate Summaries
 
 The `cached_summaries/` directory contains table-level aggregate values reported in the manuscript. These are not raw sample-level data. They are intended to let reviewers inspect and machine-read the reported evidence blocks without rerunning full proxy generation or retraining.
+
+The DINOv2 Gate 3 cached files include aggregate accuracy, paired-delta, subset-diagnostic, and gate-status summaries for the direct 10% CIFAR-100 subset-selection audit. They do not include selected indices, raw images, checkpoints, or logs.
 
 The verification scripts check paper-style table inputs rather than recomputing expensive upstream scores:
 

@@ -1,0 +1,4 @@
+budget,method,n,classes_present_mean,classes_present_std,class_entropy_norm_mean,class_entropy_norm_std,mean_dinov2_isolation_mean,mean_dinov2_isolation_std,delta_vs_full_dinov2_isolation_mean,delta_vs_full_dinov2_isolation_std,mean_first_learning_mean,mean_first_learning_std,delta_vs_full_first_learning_mean,delta_vs_full_first_learning_std,frac_top10_first_learning_mean,frac_top10_first_learning_std
+0.1,DINOv2-Isolation-Easy,3,76.000000,0.000000,0.818078,0.000000,0.197309,0.000000,-0.168847,0.000000,22.693000,0.000000,-5.844780,0.000000,0.042600,0.000000
+0.1,DINOv2-Isolation-Hard,3,100.000000,0.000000,0.939053,0.000000,0.518939,0.000000,0.152782,0.000000,27.020800,0.000000,-1.516980,0.000000,0.192400,0.000000
+0.1,Random,3,100.000000,0.000000,0.998053,0.000168,0.364058,0.001598,-0.002098,0.001598,28.418467,0.095637,-0.119313,0.095637,0.128667,0.006429

@@ -4,6 +4,11 @@ Reported results summary,cached_summaries/reported_results_summary.csv,scripts/v
 Table 9,cached_summaries/table09_dependence_main.csv,scripts/verify_cached_summaries.py,Main dependence-audit numeric summary,Aggregate reported correlations
 Table 10,cached_summaries/table10_convae_check.csv,scripts/verify_cached_summaries.py,CIFAR-100 dataset-specific ConvAE reconstruction proxy audit,Aggregate reported correlations and R2 intervals
 Table 11,cached_summaries/table11_dinov2_stress.csv,scripts/verify_cached_summaries.py,DINOv2 representation-level stress test,Aggregate reported correlations and R2 means
+DINOv2 Gate 3,cached_summaries/dinov2_gate3_transfer_summary.csv,scripts/verify_cached_summaries.py,DINOv2 first-learning Gate 3 transfer audit,Aggregate reported three-seed transfer and diagnostics
+DINOv2 Gate 3 accuracy,cached_summaries/dinov2_gate3_accuracy_summary.csv,scripts/verify_cached_summaries.py,DINOv2 Gate 3 accuracy summary,Aggregate three-seed accuracies
+DINOv2 Gate 3 deltas,cached_summaries/dinov2_gate3_transfer_delta_summary.csv,scripts/verify_cached_summaries.py,DINOv2 Gate 3 paired deltas,Aggregate three-seed paired deltas
+DINOv2 Gate 3 diagnostics,cached_summaries/dinov2_gate3_diagnostics_summary.csv,scripts/verify_cached_summaries.py,DINOv2 Gate 3 subset diagnostics,Aggregate class and first-learning diagnostics
+DINOv2 Gate 3 status,cached_summaries/dinov2_gate3_gate_status.json,scripts/verify_cached_summaries.py,DINOv2 Gate 3 pass-fail status,Declared Gate 3 criterion status
 Table 13,cached_summaries/table13_imagenet1k_checks.csv,scripts/verify_cached_summaries.py,ImageNet-1K validation dependence and predictive checks,Aggregate reported scoring checks
 Table 15,cached_summaries/table15_predictive_validity.csv,scripts/verify_cached_summaries.py,CIFAR-100 predictive-validity split results,Aggregate reported held-out R2 values
 Table 16,cached_summaries/table16_cifar100_transfer.csv,scripts/verify_cached_summaries.py,Operational-transfer audit on CIFAR-100,Aggregate reported five-seed accuracies and deltas

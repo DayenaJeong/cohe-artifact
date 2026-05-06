@@ -1,0 +1,4 @@
+budget,method,accuracy_mean,n,seeds,delta_vs_random,ci95_low,ci95_high,passes_gate3,classes_present_mean,class_entropy_norm_mean,mean_first_learning_mean,frac_top10_first_learning_mean,cohe_reading
+0.1,Random,26.62,3,0 1 2,,,,,100,0.998,28.42,0.1287,seed-matched baseline
+0.1,DINOv2-Isolation-Hard,11.21,3,0 1 2,-15.41,-15.87,-14.95,false,100,0.939,27.02,0.1924,target-specific dynamics; no actionability
+0.1,DINOv2-Isolation-Easy,24.25,3,0 1 2,-2.37,-3.13,-1.61,false,76,0.818,22.69,0.0426,no reliable transfer

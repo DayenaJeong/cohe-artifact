@@ -1,0 +1,3 @@
+budget,method,mean_delta_acc,std_delta_acc,ci95_low,ci95_high,p_value,n_pairs,paired_seeds
+0.1,DINOv2-Isolation-Hard,-15.4100,0.1833,-15.8653,-14.9547,4.71609e-05,3,0 1 2
+0.1,DINOv2-Isolation-Easy,-2.3700,0.3045,-3.1263,-1.6137,0.00545627,3,0 1 2

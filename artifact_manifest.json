@@ -4,6 +4,7 @@
   "anonymized": true,
   "included_components": [
     "stage-wise audit scripts",
+    "optional DINOv2 Gate 3 transfer scripts",
     "cached-summary verification scripts",
     "CSV schemas",
     "toy examples",
@@ -38,12 +39,20 @@
       "scripts/run_stage2_prediction.py",
       "scripts/run_stage3_transfer_summary.py",
       "scripts/generate_claim_card.py",
+      "scripts/run_dinov2_gate3_transfer.py",
+      "scripts/run_dinov2_gate3_transfer.sh",
+      "scripts/aggregate_dinov2_gate3_transfer.py",
       "scripts/verify_cached_summaries.py",
       "scripts/render_cached_tables.py",
       "scripts/smoke_test.sh"
     ],
     "cached_summaries": [
       "cached_summaries/main_claim_tiers.csv",
+      "cached_summaries/dinov2_gate3_transfer_summary.csv",
+      "cached_summaries/dinov2_gate3_accuracy_summary.csv",
+      "cached_summaries/dinov2_gate3_transfer_delta_summary.csv",
+      "cached_summaries/dinov2_gate3_diagnostics_summary.csv",
+      "cached_summaries/dinov2_gate3_gate_status.json",
       "cached_summaries/reported_results_summary.csv",
       "cached_summaries/paper_table_index.csv",
       "cached_summaries/table09_dependence_main.csv",
@@ -68,7 +77,8 @@
     "sample-indexed proxy CSV",
     "sample-indexed discriminative-target CSV",
     "held-out split ID CSV",
-    "optional transfer-results CSV"
+    "optional transfer-results CSV",
+    "optional upstream CIFAR-100 data and DINOv2 Gate 3 inputs for full transfer reruns"
   ],
   "data_policy": {
     "raw_datasets": "excluded",
@@ -81,5 +91,5 @@
     "smoke_tests": "included"
   },
   "license_note": "Users must obtain upstream assets from their original sources and follow the corresponding dataset licenses, access rules, and model-card terms.",
-  "reproduction_scope": "The artifact reproduces COHE-style dependence, predictive-validity, transfer-summary, claim-card, and cached-summary verification reports from user-provided or included aggregate CSVs. It does not regenerate expensive proxy scores or retrain large models."
+  "reproduction_scope": "The artifact reproduces COHE-style dependence, predictive-validity, transfer-summary, claim-card, and cached-summary verification reports from user-provided or included aggregate CSV/JSON files. Optional DINOv2 Gate 3 scripts can rerun the transfer audit only when users provide upstream datasets, DINOv2 scores, first-learning targets, Random baselines, and PyTorch/torchvision dependencies."
 }

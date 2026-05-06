@@ -6,6 +6,7 @@ cached_summaries/paper_table_index.csv exists and can be parsed as CSV.
 It writes a compact Markdown inventory under outputs/.
 """
 
+import json
 from pathlib import Path
 import sys
 
@@ -34,22 +35,40 @@ def main():
         if not artifact_path.exists():
             errors.append(f"Missing listed artifact_file: {artifact_rel}")
             continue
-        try:
-            df = pd.read_csv(artifact_path)
-        except Exception as exc:  # pragma: no cover - defensive CLI path
-            errors.append(f"Malformed CSV {artifact_rel}: {exc}")
-            continue
-        if df.empty:
-            errors.append(f"CSV has no rows: {artifact_rel}")
-            continue
-        rows.append(
-            {
-                "paper_table": record["paper_table"],
-                "artifact_file": artifact_rel,
-                "rows": len(df),
-                "columns": ", ".join(str(c) for c in df.columns),
-            }
-        )
+        if artifact_path.suffix == ".json":
+            try:
+                payload = json.loads(artifact_path.read_text())
+            except Exception as exc:  # pragma: no cover - defensive CLI path
+                errors.append(f"Malformed JSON {artifact_rel}: {exc}")
+                continue
+            if not payload:
+                errors.append(f"JSON is empty: {artifact_rel}")
+                continue
+            rows.append(
+                {
+                    "paper_table": record["paper_table"],
+                    "artifact_file": artifact_rel,
+                    "rows": 1,
+                    "columns": ", ".join(str(k) for k in payload.keys()),
+                }
+            )
+        else:
+            try:
+                df = pd.read_csv(artifact_path)
+            except Exception as exc:  # pragma: no cover - defensive CLI path
+                errors.append(f"Malformed CSV {artifact_rel}: {exc}")
+                continue
+            if df.empty:
+                errors.append(f"CSV has no rows: {artifact_rel}")
+                continue
+            rows.append(
+                {
+                    "paper_table": record["paper_table"],
+                    "artifact_file": artifact_rel,
+                    "rows": len(df),
+                    "columns": ", ".join(str(c) for c in df.columns),
+                }
+            )
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     lines = ["# Cached Summary Inventory", ""]

@@ -2,6 +2,7 @@
 """Render cached aggregate summaries as simple Markdown tables."""
 
 from pathlib import Path
+import json
 
 import pandas as pd
 
@@ -40,17 +41,13 @@ def main():
         artifact_path = root / artifact_rel
         if not artifact_path.exists():
             continue
-        df = pd.read_csv(artifact_path)
-        lines.extend(
-            [
-                f"## {record['paper_table']}: {record['description']}",
-                "",
-                f"Source: `{artifact_rel}`",
-                "",
-                markdown_table(df),
-                "",
-            ]
-        )
+        lines.extend([f"## {record['paper_table']}: {record['description']}", "", f"Source: `{artifact_rel}`", ""])
+        if artifact_path.suffix == ".json":
+            payload = json.loads(artifact_path.read_text())
+            lines.extend(["```json", json.dumps(payload, indent=2), "```", ""])
+        else:
+            df = pd.read_csv(artifact_path)
+            lines.extend([markdown_table(df), ""])
 
     out_path.write_text("\n".join(lines))
     print(f"Wrote {out_path.relative_to(root)}")
