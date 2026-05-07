@@ -29,6 +29,7 @@ mkdir -p "$OUT"
   --out "$OUT/cohe_claim_card.md"
 
 "$PY" "$ROOT/scripts/verify_cached_summaries.py"
+"$PY" "$ROOT/scripts/verify_derived_scalar_arrays.py"
 "$PY" "$ROOT/scripts/render_cached_tables.py"
 
 test -s "$OUT/stage1_dependence.csv"

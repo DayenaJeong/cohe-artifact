@@ -7,6 +7,7 @@ This artifact accompanies the paper **COHE: Auditing Cross-Objective Transfer of
 - Stage-wise audit scripts for dependence, held-out prediction, transfer summaries, and claim-card generation.
 - CSV schemas for proxy scores, target scores, split IDs, and transfer results.
 - Toy CSV examples for a smoke test.
+- Selected derived scalar arrays for CIFAR-100 tabular gate checks, including DINOv2 isolation and first-learning targets.
 - Reporting templates for COHE audit cards, claim tiers, and checklist-style reporting.
 - Cached aggregate summaries for paper-style table verification, including DINOv2 Gate 3 accuracy, transfer-delta, diagnostic, and gate-status summaries.
 - Optional DINOv2 Gate 3 runner and aggregator scripts for users with upstream CIFAR-100 data, DINOv2 isolation scores, first-learning targets, and a seed-matched Random baseline.
@@ -17,7 +18,7 @@ This artifact accompanies the paper **COHE: Auditing Cross-Objective Transfer of
 
 This anonymized artifact does not redistribute CIFAR, ImageNet, pretrained checkpoints, model weights, or raw images. Users should obtain upstream assets from their original sources and follow their licenses/model cards.
 
-It also does not include full raw proxy arrays, private paths, user-specific metadata, or full historical training logs.
+It includes selected derived scalar arrays where available, but it does not include private paths, user-specific metadata, full historical training logs, raw upstream datasets, checkpoints, or full scoring/retraining pipelines.
 
 ## Quickstart
 
@@ -33,6 +34,7 @@ The smoke test runs all stage scripts on toy CSV files, verifies cached aggregat
 
 ```bash
 bash scripts/smoke_test.sh
+python scripts/verify_derived_scalar_arrays.py
 python scripts/verify_cached_summaries.py
 python scripts/render_cached_tables.py
 ```
@@ -47,6 +49,23 @@ Expected outputs:
 - `outputs/rendered_cached_tables.md`
 
 These outputs are generated locally and are excluded from the upload ZIP.
+
+## Derived Scalar Arrays
+
+The `derived_scalar_arrays/` directory contains selected CIFAR-100 train-split scalar arrays with anonymous sample IDs, including DINOv2 isolation, first-learning targets, DDIM reconstruction, CE, margin, GradNorm, and several additional scalar proxies. These are derived tabular outputs only: no images, labels as filenames, local paths, weights, checkpoints, or raw datasets are included.
+
+Reviewers can inspect the release and run one zero-GPU Gate 2 check with:
+
+```bash
+python3 scripts/verify_derived_scalar_arrays.py
+python3 scripts/run_stage2_prediction.py \
+  --proxy derived_scalar_arrays/cifar100_dinov2_proxy_scores.csv \
+  --target derived_scalar_arrays/cifar100_first_learning_targets.csv \
+  --splits derived_scalar_arrays/cifar100_split_ids.csv \
+  --out outputs/derived_dinov2_first_learning_prediction.csv
+```
+
+These arrays support gate computations and tabular reporting where the needed scalar targets are included. Full proxy regeneration and retraining-based transfer accuracies still require upstream datasets/models and GPU scoring or retraining.
 
 ## Expected Inputs
 
@@ -90,7 +109,7 @@ For a new proxy, provide sample-indexed proxy and target CSVs, split IDs for hel
 
 When Stage 3 retraining is infeasible, report only Stage 1 and Stage 2 evidence. Such reports support alignment or predictive-validity wording only; they should not be described as operational transfer evidence.
 
-The cached files in `cached_summaries/` are aggregate manuscript summaries, not raw sample-level data. Use:
+The cached files in `cached_summaries/` are aggregate manuscript summaries. Use:
 
 ```bash
 python3 scripts/verify_cached_summaries.py
@@ -109,7 +128,7 @@ The paper's DINOv2 Gate 3 table is represented by aggregate cached files:
 - `cached_summaries/dinov2_gate3_diagnostics_summary.csv`
 - `cached_summaries/dinov2_gate3_gate_status.json`
 
-These files are aggregate summaries only. They do not include CIFAR-100 images, full proxy arrays, selected indices, checkpoints, or training logs.
+These files are aggregate summaries only. They do not include CIFAR-100 images, selected indices, checkpoints, or training logs.
 
 Users who want to rerun the full transfer audit can use:
 

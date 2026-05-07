@@ -2,11 +2,11 @@
 
 ## Why is the artifact lightweight?
 
-COHE is an evaluation and reporting protocol. The artifact provides reusable audit scripts, schemas, templates, toy examples, and aggregate table summaries without redistributing datasets, images, checkpoints, or full proxy arrays.
+COHE is an evaluation and reporting protocol. The artifact provides reusable audit scripts, schemas, templates, toy examples, selected derived scalar arrays, and aggregate table summaries without redistributing datasets, images, checkpoints, or full scoring/retraining pipelines.
 
 ## Why are raw datasets or proxy arrays not redistributed?
 
-The paper uses public datasets and pretrained model families whose licenses and access rules remain upstream. Full proxy arrays and raw images can also create size, provenance, and anonymity issues. This artifact therefore includes aggregate summaries and reusable code, not raw sample-level data.
+The paper uses public datasets and pretrained model families whose licenses and access rules remain upstream. Raw images, upstream datasets, weights, checkpoints, and full retraining pipelines are therefore excluded. The artifact includes selected derived scalar arrays where available plus aggregate summaries and reusable code.
 
 ## Why is DINOv2 not counted among the eight primary generative proxy families?
 

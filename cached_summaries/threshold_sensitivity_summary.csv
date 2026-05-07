@@ -1,0 +1,13 @@
+threshold_r2_band,target,proxy_group,r2_value,gate2_status,final_tier,conclusion_changed
+0.001,CE loss,generative multi-proxy,0.0002,below_threshold,no reliable surrogate,false
+0.001,Margin hardness,generative multi-proxy,0.0034,above_threshold_only,no reliable surrogate,false
+0.001,First-learning epoch,DINOv2 isolation,0.2126,above_threshold,target-specific relation,false
+0.0025,CE loss,generative multi-proxy,0.0002,below_threshold,no reliable surrogate,false
+0.0025,Margin hardness,generative multi-proxy,0.0034,above_threshold_only,no reliable surrogate,false
+0.0025,First-learning epoch,DINOv2 isolation,0.2126,above_threshold,target-specific relation,false
+0.005,CE loss,generative multi-proxy,0.0002,below_threshold,no reliable surrogate,false
+0.005,Margin hardness,generative multi-proxy,0.0034,below_threshold,no reliable surrogate,false
+0.005,First-learning epoch,DINOv2 isolation,0.2126,above_threshold,target-specific relation,false
+0.010,CE loss,generative multi-proxy,0.0002,below_threshold,no reliable surrogate,false
+0.010,Margin hardness,generative multi-proxy,0.0034,below_threshold,no reliable surrogate,false
+0.010,First-learning epoch,DINOv2 isolation,0.2126,above_threshold,target-specific relation,false

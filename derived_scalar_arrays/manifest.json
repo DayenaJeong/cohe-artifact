@@ -1,0 +1,75 @@
+{
+  "component": "derived_scalar_arrays",
+  "version": "review-anonymized-1.2",
+  "dataset_scope": "CIFAR-100 train split scalar audit arrays",
+  "row_count": 50000,
+  "release_policy": "Derived scalar arrays only; no images, file paths, upstream datasets, weights, checkpoints, or retraining logs.",
+  "split_ids": {
+    "file": "derived_scalar_arrays/cifar100_split_ids.csv",
+    "purpose": "Deterministic 80/20 split for zero-GPU gate-script demonstrations on released tabular arrays; cached manuscript summaries remain the source for reported multi-split results.",
+    "generator": "NumPy default_rng seed 0 over anonymous sample_id values"
+  },
+  "included_files": [
+    {
+      "path": "derived_scalar_arrays/cifar100_scalar_audit_arrays.csv",
+      "sha256": "c1462f5a984a16f20563b8a2a6193cbb2dd7cc20dee5a8d1e85217a6c08467a9"
+    },
+    {
+      "path": "derived_scalar_arrays/cifar100_split_ids.csv",
+      "sha256": "e1a03ad4d4a89bb9e54d0c7a014a166b6031940856cb41267f0e6740137b60b5"
+    },
+    {
+      "path": "derived_scalar_arrays/cifar100_ddim_proxy_scores.csv",
+      "sha256": "9249482f2bafc1abf912fcee54974fa38e7d0be6867c4e57f54f55b4dcd99015"
+    },
+    {
+      "path": "derived_scalar_arrays/cifar100_ce_targets.csv",
+      "sha256": "ab9c80480ad483bc7dc87b34ece038f6e4eaadf0de92cb9413a2e1baf80b63c1"
+    },
+    {
+      "path": "derived_scalar_arrays/cifar100_dinov2_proxy_scores.csv",
+      "sha256": "b15cfa2a93421b522077e243f5b995f4146eced15b1567e0f0f079c475c2bc82"
+    },
+    {
+      "path": "derived_scalar_arrays/cifar100_first_learning_targets.csv",
+      "sha256": "bba39e4d3cba7577b88244d8f129e8f19b1446aec557aaf728e28d0b0e93eadf"
+    },
+    {
+      "path": "derived_scalar_arrays/schema.json",
+      "sha256": "ef9758909d18b1572f412721fe6e5ca8b6c003ebdcfde88a47284b3f38699dc7"
+    }
+  ],
+  "included_columns": [
+    "sample_id",
+    "ddim_reconstruction",
+    "sdvae_roundtrip",
+    "sd15_latent_denoise",
+    "emu3_vq_reconstruction",
+    "dinov2_isolation",
+    "convae_reconstruction",
+    "ce_resnet18",
+    "margin_resnet18",
+    "gradnorm_resnet18",
+    "forgetting_count",
+    "first_learning_epoch"
+  ],
+  "missing_or_excluded_columns": [
+    {
+      "column": "class_id",
+      "reason": "No verified anonymized CIFAR-100 train-label array was located in the release workspace."
+    },
+    {
+      "column": "ddpm_score_norm",
+      "reason": "No verified per-sample DDPM score-norm array was located in the release workspace."
+    },
+    {
+      "column": "ddim_clip",
+      "reason": "Located candidate array contained no finite values and was excluded."
+    },
+    {
+      "column": "ce_resnet50",
+      "reason": "No verified per-sample CIFAR-100 ResNet-50 CE target array was located in the release workspace."
+    }
+  ],
+  "full_regeneration_note": "Full regeneration of proxy arrays or retraining-based transfer accuracies requires upstream datasets/models and GPU scoring or retraining outside this lightweight artifact."
+}

@@ -1,0 +1,58 @@
+{
+  "dataset": "CIFAR-100 train split, derived scalar outputs only",
+  "row_count": 50000,
+  "primary_file": "derived_scalar_arrays/cifar100_scalar_audit_arrays.csv",
+  "required_columns": [
+    "sample_id",
+    "ddim_reconstruction",
+    "sdvae_roundtrip",
+    "sd15_latent_denoise",
+    "emu3_vq_reconstruction",
+    "dinov2_isolation",
+    "convae_reconstruction",
+    "ce_resnet18",
+    "margin_resnet18",
+    "gradnorm_resnet18",
+    "forgetting_count",
+    "first_learning_epoch"
+  ],
+  "convenience_projection_files": [
+    "cifar100_ddim_proxy_scores.csv",
+    "cifar100_ce_targets.csv",
+    "cifar100_dinov2_proxy_scores.csv",
+    "cifar100_first_learning_targets.csv",
+    "cifar100_split_ids.csv"
+  ],
+  "column_descriptions": {
+    "sample_id": "Anonymous integer row index shared across released scalar files; not a path or image filename.",
+    "ddim_reconstruction": "DDIM reconstruction proxy; higher means larger reconstruction error.",
+    "sdvae_roundtrip": "Stable-Diffusion VAE latent round-trip proxy; higher means larger latent discrepancy.",
+    "sd15_latent_denoise": "Stable-Diffusion v1.5 latent denoising proxy; higher means larger denoising error.",
+    "emu3_vq_reconstruction": "Emu3 VQ reconstruction proxy; higher means larger reconstruction error.",
+    "dinov2_isolation": "DINOv2 representation-isolation score; higher means more isolated in representation space.",
+    "convae_reconstruction": "CIFAR-100-trained ConvAE reconstruction proxy; higher means larger reconstruction error.",
+    "ce_resnet18": "ResNet-18 cross-entropy target; higher means harder.",
+    "margin_resnet18": "ResNet-18 margin-hardness target; higher means harder.",
+    "gradnorm_resnet18": "ResNet-18 gradient-norm target; higher means larger input/parameter sensitivity.",
+    "forgetting_count": "Training-dynamics forgetting count target; higher means more forgetting events.",
+    "first_learning_epoch": "Mapped first-learning epoch target; never-learned samples are mapped to 51, so higher means later first learning or never learned."
+  },
+  "missing_or_excluded_columns": [
+    {
+      "column": "class_id",
+      "reason": "No verified anonymized CIFAR-100 train-label array was located in the release workspace."
+    },
+    {
+      "column": "ddpm_score_norm",
+      "reason": "No verified per-sample DDPM score-norm array was located in the release workspace."
+    },
+    {
+      "column": "ddim_clip",
+      "reason": "Located candidate array contained no finite values and was excluded."
+    },
+    {
+      "column": "ce_resnet50",
+      "reason": "No verified per-sample CIFAR-100 ResNet-50 CE target array was located in the release workspace."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "artifact_name": "cohe_anonymized_artifact",
-  "version": "review-anonymized-1.1",
+  "version": "review-anonymized-1.2",
   "anonymized": true,
   "included_components": [
     "stage-wise audit scripts",
@@ -8,6 +8,7 @@
     "cached-summary verification scripts",
     "CSV schemas",
     "toy examples",
+    "selected derived scalar arrays",
     "reporting templates",
     "claim tier template",
     "cached aggregate summaries",
@@ -24,7 +25,7 @@
     "raw images",
     "pretrained checkpoints",
     "model weights",
-    "full raw proxy arrays",
+    "unreleased full raw proxy arrays",
     "private paths",
     "author-identifying metadata"
   ],
@@ -43,11 +44,24 @@
       "scripts/run_dinov2_gate3_transfer.sh",
       "scripts/aggregate_dinov2_gate3_transfer.py",
       "scripts/verify_cached_summaries.py",
+      "scripts/verify_derived_scalar_arrays.py",
       "scripts/render_cached_tables.py",
       "scripts/smoke_test.sh"
     ],
+    "derived_scalar_arrays": [
+      "derived_scalar_arrays/README.md",
+      "derived_scalar_arrays/cifar100_scalar_audit_arrays.csv",
+      "derived_scalar_arrays/cifar100_split_ids.csv",
+      "derived_scalar_arrays/cifar100_ddim_proxy_scores.csv",
+      "derived_scalar_arrays/cifar100_ce_targets.csv",
+      "derived_scalar_arrays/cifar100_dinov2_proxy_scores.csv",
+      "derived_scalar_arrays/cifar100_first_learning_targets.csv",
+      "derived_scalar_arrays/schema.json",
+      "derived_scalar_arrays/manifest.json"
+    ],
     "cached_summaries": [
       "cached_summaries/main_claim_tiers.csv",
+      "cached_summaries/threshold_sensitivity_summary.csv",
       "cached_summaries/dinov2_gate3_transfer_summary.csv",
       "cached_summaries/dinov2_gate3_accuracy_summary.csv",
       "cached_summaries/dinov2_gate3_transfer_delta_summary.csv",
@@ -85,11 +99,12 @@
     "raw_images": "excluded",
     "pretrained_weights": "excluded",
     "checkpoints": "excluded",
-    "full_proxy_arrays": "excluded",
+    "selected_derived_scalar_arrays": "included",
+    "unreleased_full_raw_proxy_arrays": "excluded",
     "aggregate_cached_summaries": "included",
     "toy_examples": "included",
     "smoke_tests": "included"
   },
   "license_note": "Users must obtain upstream assets from their original sources and follow the corresponding dataset licenses, access rules, and model-card terms.",
-  "reproduction_scope": "The artifact reproduces COHE-style dependence, predictive-validity, transfer-summary, claim-card, and cached-summary verification reports from user-provided or included aggregate CSV/JSON files. Optional DINOv2 Gate 3 scripts can rerun the transfer audit only when users provide upstream datasets, DINOv2 scores, first-learning targets, Random baselines, and PyTorch/torchvision dependencies."
+  "reproduction_scope": "The artifact reproduces COHE-style dependence, predictive-validity, transfer-summary, claim-card, derived-scalar-array verification, and cached-summary verification reports from user-provided or included tabular CSV/JSON files. Optional DINOv2 Gate 3 scripts can rerun the transfer audit only when users provide upstream datasets, DINOv2 scores, first-learning targets, Random baselines, and PyTorch/torchvision dependencies."
 }

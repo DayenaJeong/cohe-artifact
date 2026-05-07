@@ -1,6 +1,7 @@
 paper_table,artifact_file,script_to_verify,description,reproduction_scope
 Main claim tiers,cached_summaries/main_claim_tiers.csv,scripts/verify_cached_summaries.py,Compact claim-tier assignments used by the audit card,Aggregate claim accounting only
 Reported results summary,cached_summaries/reported_results_summary.csv,scripts/verify_cached_summaries.py,High-level reported result summary,Aggregate claim accounting only
+Threshold sensitivity,cached_summaries/threshold_sensitivity_summary.csv,scripts/verify_cached_summaries.py,Gate 2 near-zero-band sensitivity for selected CE/margin and DINOv2 readings,Aggregate threshold-sensitivity check
 Table 9,cached_summaries/table09_dependence_main.csv,scripts/verify_cached_summaries.py,Main dependence-audit numeric summary,Aggregate reported correlations
 Table 10,cached_summaries/table10_convae_check.csv,scripts/verify_cached_summaries.py,CIFAR-100 dataset-specific ConvAE reconstruction proxy audit,Aggregate reported correlations and R2 intervals
 Table 11,cached_summaries/table11_dinov2_stress.csv,scripts/verify_cached_summaries.py,DINOv2 representation-level stress test,Aggregate reported correlations and R2 means
