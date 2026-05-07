@@ -54,7 +54,7 @@ These outputs are generated locally and are excluded from the upload ZIP.
 
 The `derived_scalar_arrays/` directory contains selected CIFAR-100 train-split scalar arrays with anonymous sample IDs, including DINOv2 isolation, first-learning targets, DDIM reconstruction, CE, margin, GradNorm, and several additional scalar proxies. These are derived tabular outputs only: no images, labels as filenames, local paths, weights, checkpoints, or raw datasets are included.
 
-Reviewers can inspect the release and run one zero-GPU Gate 2 check with:
+Reviewers can inspect the release and run one zero-GPU tabular Gate 2 interface check with:
 
 ```bash
 python3 scripts/verify_derived_scalar_arrays.py
@@ -65,7 +65,7 @@ python3 scripts/run_stage2_prediction.py \
   --out outputs/derived_dinov2_first_learning_prediction.csv
 ```
 
-These arrays support gate computations and tabular reporting where the needed scalar targets are included. Full proxy regeneration and retraining-based transfer accuracies still require upstream datasets/models and GPU scoring or retraining.
+These arrays support zero-GPU tabular verification of gate computations and reported audit summaries where the needed scalar targets are included. Full regeneration of proxy scores or retraining-based Gate 3 transfer results still requires upstream datasets/models and GPU scoring or retraining.
 
 ## Expected Inputs
 

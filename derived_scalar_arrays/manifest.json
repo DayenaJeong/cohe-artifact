@@ -6,7 +6,7 @@
   "release_policy": "Derived scalar arrays only; no images, file paths, upstream datasets, weights, checkpoints, or retraining logs.",
   "split_ids": {
     "file": "derived_scalar_arrays/cifar100_split_ids.csv",
-    "purpose": "Deterministic 80/20 split for zero-GPU gate-script demonstrations on released tabular arrays; cached manuscript summaries remain the source for reported multi-split results.",
+    "purpose": "Deterministic 80/20 split for zero-GPU tabular gate-script checks on released arrays; cached manuscript summaries remain the source for reported multi-split results.",
     "generator": "NumPy default_rng seed 0 over anonymous sample_id values"
   },
   "included_files": [
@@ -36,7 +36,7 @@
     },
     {
       "path": "derived_scalar_arrays/schema.json",
-      "sha256": "ef9758909d18b1572f412721fe6e5ca8b6c003ebdcfde88a47284b3f38699dc7"
+      "sha256": "60095598543dd3674b7fe9127266fe34e691acfe7c85c0a0f55b43e16274a160"
     }
   ],
   "included_columns": [
@@ -64,12 +64,12 @@
     },
     {
       "column": "ddim_clip",
-      "reason": "Located candidate array contained no finite values and was excluded."
+      "reason": "Semantic CLIP-space variants require re-scoring under the relevant model/license terms and are not redistributed as independent scalar arrays in this release."
     },
     {
       "column": "ce_resnet50",
-      "reason": "No verified per-sample CIFAR-100 ResNet-50 CE target array was located in the release workspace."
+      "reason": "ResNet-50 second-learner transfer is provided through cached aggregate summaries rather than per-sample CE arrays, because a verified per-sample ResNet-50 CE file was not available for this release."
     }
   ],
-  "full_regeneration_note": "Full regeneration of proxy arrays or retraining-based transfer accuracies requires upstream datasets/models and GPU scoring or retraining outside this lightweight artifact."
+  "full_regeneration_note": "Full regeneration of proxy scores or retraining-based Gate 3 transfer results requires upstream datasets/models and GPU scoring or retraining outside this lightweight artifact."
 }

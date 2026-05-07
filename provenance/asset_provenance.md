@@ -5,7 +5,7 @@ The paper uses public benchmark datasets and pretrained model families for evalu
 | Asset family | Role in audit | Redistributed here | User responsibility |
 |---|---|---|---|
 | CIFAR-10/100 | Main dependence, prediction, and subset-selection audits | No | Follow upstream dataset terms |
-| ImageNet-1K / ImageNet-10 | Large-scale validation scoring and minimal ImageNet-family sanity checks | No | Follow upstream dataset access rules |
+| ImageNet-1K / ImageNet-10 | Large-scale validation scoring and limited ImageNet-family operational checks | No | Follow upstream dataset access rules |
 | DDPM / DDIM checkpoints | Denoising, score-norm, and reconstruction proxies | No | Follow upstream model terms |
 | Stable Diffusion VAE / SD-v1.5 | Latent round-trip and latent-denoising proxies | No | Follow upstream model-card terms |
 | CLIP | Semantic reconstruction-discrepancy proxy component | No | Follow upstream license/model-card terms |

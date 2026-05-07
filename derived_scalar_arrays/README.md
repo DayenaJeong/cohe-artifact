@@ -2,7 +2,7 @@
 
 This folder releases selected CIFAR-100 train-split scalar arrays used for COHE gate checks. The files contain anonymous `sample_id` values and derived scalar outputs only.
 
-We release derived scalar arrays only -- no images, weights, checkpoints, or raw datasets. These arrays support zero-GPU reproduction of gate computations and reported tabular audits where the required scalar targets and cached transfer summaries are included. Full regeneration of proxy arrays or retraining-based transfer accuracies still requires upstream datasets/models and GPU scoring or retraining.
+We release derived scalar arrays only -- no images, weights, checkpoints, or raw datasets. These arrays include DINOv2 isolation scores and support zero-GPU tabular verification of COHE gate computations and reported audit summaries where the required scalar targets and cached transfer summaries are included. Full regeneration of proxy scores or retraining-based Gate 3 transfer results still requires upstream datasets/models and GPU scoring or retraining.
 
 ## Files
 
@@ -23,4 +23,4 @@ python scripts/run_stage2_prediction.py \
   --out outputs/derived_dinov2_first_learning_prediction.csv
 ```
 
-The second command is a zero-GPU interface check on one released split. It is not a replacement for the paper's cached multi-split summaries or the DINOv2 Gate 3 retraining audit.
+The second command is a zero-GPU tabular interface check on one released split. It is not a replacement for the paper's cached multi-split summaries or the DINOv2 Gate 3 retraining audit.

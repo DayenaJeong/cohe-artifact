@@ -1,5 +1,5 @@
 method,metric_type,budget_0_1_delta,budget_0_1_ci,budget_0_3_delta,budget_0_3_ci,cohe_reading
 Random accuracy,baseline_mean_accuracy,96.90,,97.73,,three-seed baseline mean
-Gen-Hard,delta_vs_random,-11.48,"[-13.66,-9.30]",-0.85,"[-1.56,-0.14]",below Random in this sanity check
+Gen-Hard,delta_vs_random,-11.48,"[-13.66,-9.30]",-0.85,"[-1.56,-0.14]",below Random in this limited operational check
 Disc-Hard,delta_vs_random,-8.89,"[-10.32,-7.46]",0.48,"[0.42,0.55]",budget-dependent operational behavior
 OHS-XOR diagnostic,delta_vs_random,0.21,"[-0.19,0.62]",0.40,"[-0.36,1.16]","mixed diagnostic, not a method"

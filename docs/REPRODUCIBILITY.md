@@ -14,7 +14,7 @@ This artifact is a lightweight, anonymized COHE evaluation resource. It supports
 
 ## What Cannot Be Reproduced Here
 
-The artifact does not regenerate full proxy arrays, retrain classifiers, run ImageNet-scale scoring, or download upstream model checkpoints. Those steps require upstream datasets, model checkpoints, training code, and compute that are not redistributed for anonymity, licensing, and size reasons.
+The artifact does not regenerate proxy scores, retrain classifiers, run ImageNet-scale scoring, or download upstream model checkpoints. Those steps require upstream datasets, model checkpoints, training code, and compute that are not redistributed for anonymity, licensing, and size reasons.
 
 This artifact includes selected derived scalar arrays where available, but it does not contain datasets, raw images, pretrained weights, checkpoints, private paths, full historical training logs, or full scoring/retraining pipelines.
 
@@ -40,11 +40,11 @@ Outputs are written under `outputs/`, which is excluded from the upload ZIP.
 
 ## Derived Scalar Arrays
 
-The `derived_scalar_arrays/` directory contains selected CIFAR-100 train-split scalar arrays with anonymous sample IDs. These arrays support zero-GPU gate computations and tabular reporting where the required scalar targets are included. They do not replace full regeneration of proxy arrays or retraining-based transfer results, which still require upstream assets and GPU scoring or retraining.
+The `derived_scalar_arrays/` directory contains selected CIFAR-100 train-split scalar arrays with anonymous sample IDs, including DINOv2 isolation scores. These arrays support zero-GPU tabular verification of gate computations and reported audit summaries where the required scalar targets are included. They do not replace full regeneration of proxy scores or retraining-based Gate 3 transfer results, which still require upstream assets and GPU scoring or retraining.
 
 ## Cached Aggregate Summaries
 
-The `cached_summaries/` directory contains table-level aggregate values reported in the manuscript. They are intended to let reviewers inspect and machine-read the reported evidence blocks without rerunning full proxy generation or retraining.
+The `cached_summaries/` directory contains table-level aggregate values reported in the manuscript. They are intended to let reviewers inspect and machine-read the reported evidence blocks without rerunning proxy-score generation or retraining.
 
 The DINOv2 Gate 3 cached files include aggregate accuracy, paired-delta, subset-diagnostic, and gate-status summaries for the direct 10% CIFAR-100 subset-selection audit. They do not include selected indices, raw images, checkpoints, or logs.
 

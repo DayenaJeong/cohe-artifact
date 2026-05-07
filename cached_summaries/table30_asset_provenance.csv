@@ -1,6 +1,6 @@
 asset_family,role_in_audit,redistribution_in_paper,license_terms_status
 CIFAR-10/100,"Main dependence, prediction, and subset-selection audits",No images redistributed,Use upstream dataset terms
-ImageNet-1K / ImageNet-10,Large-scale validation and ImageNet-10 checks,No images redistributed,Use upstream dataset access rules
+ImageNet-1K / ImageNet-10,Large-scale validation scoring and limited ImageNet-10 checks,No images redistributed,Use upstream dataset access rules
 DDPM / DDIM checkpoints,"Denoising, score-norm, and reconstruction proxies",No weights redistributed,Use upstream model terms
 Stable Diffusion VAE / SD-v1.5,Latent round-trip and latent-denoising proxies,No weights redistributed,Use upstream model-card terms
 CLIP,Semantic reconstruction-discrepancy proxy component,No weights redistributed,Use upstream license/model-card terms

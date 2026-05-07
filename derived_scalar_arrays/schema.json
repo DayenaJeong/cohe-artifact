@@ -48,11 +48,11 @@
     },
     {
       "column": "ddim_clip",
-      "reason": "Located candidate array contained no finite values and was excluded."
+      "reason": "Semantic CLIP-space variants require re-scoring under the relevant model/license terms and are not redistributed as independent scalar arrays in this release."
     },
     {
       "column": "ce_resnet50",
-      "reason": "No verified per-sample CIFAR-100 ResNet-50 CE target array was located in the release workspace."
+      "reason": "ResNet-50 second-learner transfer is provided through cached aggregate summaries rather than per-sample CE arrays, because a verified per-sample ResNet-50 CE file was not available for this release."
     }
   ]
 }

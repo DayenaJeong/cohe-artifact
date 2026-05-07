@@ -14,7 +14,7 @@ Table 13,cached_summaries/table13_imagenet1k_checks.csv,scripts/verify_cached_su
 Table 15,cached_summaries/table15_predictive_validity.csv,scripts/verify_cached_summaries.py,CIFAR-100 predictive-validity split results,Aggregate reported held-out R2 values
 Table 16,cached_summaries/table16_cifar100_transfer.csv,scripts/verify_cached_summaries.py,Operational-transfer audit on CIFAR-100,Aggregate reported five-seed accuracies and deltas
 Table 17,cached_summaries/table17_resnet50_transfer.csv,scripts/verify_cached_summaries.py,Second-learner CIFAR-100 ResNet-50 transfer audit,Aggregate reported five-seed deltas
-Table 18,cached_summaries/table18_imagenet10_transfer.csv,scripts/verify_cached_summaries.py,Minimal ImageNet-10 transfer sanity check,Aggregate reported three-seed deltas
+Table 18,cached_summaries/table18_imagenet10_transfer.csv,scripts/verify_cached_summaries.py,Limited ImageNet-10 operational transfer check,Aggregate reported three-seed deltas
 Table 19,cached_summaries/table19_disc_hard_diagnostics.csv,scripts/verify_cached_summaries.py,Disc-Hard failure diagnostics,Aggregate coverage and concentration diagnostics
 Table 22,cached_summaries/table22_class_balanced_controls.csv,scripts/verify_cached_summaries.py,Class-balanced controls,Aggregate reported five-seed controls
 Table 25,cached_summaries/table25_cross_architecture.csv,scripts/verify_cached_summaries.py,Cross-architecture consistency of discriminative hardness,Aggregate rank correlations

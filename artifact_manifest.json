@@ -14,6 +14,7 @@
     "cached aggregate summaries",
     "paper table index",
     "reproducibility documentation",
+    "OpenReview code-justification snippet",
     "claim-tier guide",
     "FAQ",
     "asset provenance notes",
@@ -25,12 +26,13 @@
     "raw images",
     "pretrained checkpoints",
     "model weights",
-    "unreleased full raw proxy arrays",
+    "unreleased raw scalar arrays",
     "private paths",
     "author-identifying metadata"
   ],
   "included_files": {
     "documentation": [
+      "artifact_openreview_code_justification.txt",
       "docs/REPRODUCIBILITY.md",
       "docs/CLAIM_TIER_GUIDE.md",
       "docs/FAQ.md"
@@ -100,11 +102,11 @@
     "pretrained_weights": "excluded",
     "checkpoints": "excluded",
     "selected_derived_scalar_arrays": "included",
-    "unreleased_full_raw_proxy_arrays": "excluded",
+    "unreleased_raw_scalar_arrays": "excluded",
     "aggregate_cached_summaries": "included",
     "toy_examples": "included",
     "smoke_tests": "included"
   },
   "license_note": "Users must obtain upstream assets from their original sources and follow the corresponding dataset licenses, access rules, and model-card terms.",
-  "reproduction_scope": "The artifact reproduces COHE-style dependence, predictive-validity, transfer-summary, claim-card, derived-scalar-array verification, and cached-summary verification reports from user-provided or included tabular CSV/JSON files. Optional DINOv2 Gate 3 scripts can rerun the transfer audit only when users provide upstream datasets, DINOv2 scores, first-learning targets, Random baselines, and PyTorch/torchvision dependencies."
+  "reproduction_scope": "The artifact supports zero-GPU tabular verification for COHE-style dependence, predictive-validity, transfer-summary, claim-card, derived-scalar-array, and cached-summary reports from user-provided or included tabular CSV/JSON files. Optional DINOv2 Gate 3 scripts can rerun the transfer audit only when users provide upstream datasets, DINOv2 scores, first-learning targets, Random baselines, and PyTorch/torchvision dependencies."
 }
