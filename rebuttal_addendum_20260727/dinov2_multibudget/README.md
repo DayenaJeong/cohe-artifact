@@ -12,3 +12,4 @@ configuration rather than presented as a newly rerun experiment.
 
 Run `python reproduce_table.py` to recompute the paired deltas, confidence
 intervals, and paired tests from the sanitized CSV.
+`selections/checksums.sha256` covers every released integer-index selection file.

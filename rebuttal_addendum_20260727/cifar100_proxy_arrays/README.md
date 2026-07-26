@@ -17,3 +17,4 @@ manifest has 50,000 rows and contains only integer sample/class indices.
 Exact definitions, model identifiers, preprocessing, source checksums, and
 alignment checks are recorded in `metadata/`. Source paths and checkpoints are
 intentionally not copied into this addendum.
+The family-level file `checksums.sha256` covers the arrays, manifests, and metadata.
