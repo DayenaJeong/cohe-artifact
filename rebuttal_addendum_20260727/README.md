@@ -1,8 +1,10 @@
 # COHE author-response artifact addendum (2026-07-27)
 
 This directory is a clearly separated, post-submission author-response addendum
-to the existing anonymous artifact. The original artifact files and their scope
-are unchanged; the repository root README contains only a short pointer here.
+to the existing anonymous artifact. The previously submitted materials remain
+preserved, and the newly added materials are clearly identified as a
+post-submission author-response addendum. The repository root README contains
+only a short pointer here.
 
 ## Included
 

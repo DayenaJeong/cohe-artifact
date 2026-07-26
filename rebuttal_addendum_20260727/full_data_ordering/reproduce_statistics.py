@@ -34,15 +34,38 @@ def summarize(values):
 def main():
     with (HERE / "per_seed_results.csv").open(newline="") as handle:
         rows = list(csv.DictReader(handle))
+
+    if not rows:
+        raise SystemExit("per_seed_results.csv is empty")
+
+    computed = []
+    for row_number, row in enumerate(rows, start=2):
+        random_top1 = float(row["random_top1"])
+        easy_top1 = float(row["easy_top1"])
+        shuffled_top1 = float(row["shuffled_top1"])
+        expected = {
+            "easy_minus_random_pp": easy_top1 - random_top1,
+            "shuffled_minus_random_pp": shuffled_top1 - random_top1,
+            "easy_minus_shuffled_pp": easy_top1 - shuffled_top1,
+        }
+        for column, value in expected.items():
+            stored = float(row[column])
+            if not np.isclose(stored, value, rtol=0.0, atol=1e-9):
+                raise SystemExit(
+                    f"delta mismatch at CSV row {row_number}, {column}: "
+                    f"stored={stored}, computed={value}"
+                )
+        computed.append(expected)
+
     result = {
         "easy_minus_random": summarize(
-            [float(row["easy_minus_random_pp"]) for row in rows]
+            [item["easy_minus_random_pp"] for item in computed]
         ),
         "shuffled_minus_random": summarize(
-            [float(row["shuffled_minus_random_pp"]) for row in rows]
+            [item["shuffled_minus_random_pp"] for item in computed]
         ),
         "easy_minus_shuffled": summarize(
-            [float(row["easy_minus_shuffled_pp"]) for row in rows]
+            [item["easy_minus_shuffled_pp"] for item in computed]
         ),
     }
     print(json.dumps(result, indent=2, sort_keys=True))

@@ -165,6 +165,8 @@ See `LICENSE_OR_TERMS.md` and `provenance/asset_provenance.md`. Users are respon
 The clearly separated `rebuttal_addendum_20260727/` directory contains the
 author-response artifact additions: seven CIFAR-100 scalar proxy arrays with
 integer-index manifests, DINOv2 multi-budget materials, DDPM full-data-ordering
-materials, attribution, and reproduction scripts. The original artifact scope
-is unchanged; ImageNet-1K arrays are intentionally not redistributed because
-their scalar-only release terms remain unresolved.
+materials, attribution, and reproduction scripts. The previously submitted
+materials remain preserved, and the newly added materials are clearly identified
+as a post-submission author-response addendum. ImageNet-1K arrays are
+intentionally not redistributed because their scalar-only release terms remain
+unresolved.
