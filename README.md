@@ -159,3 +159,12 @@ The artifact is anonymized for review. It is intended to contain no author names
 ## Asset and License Note
 
 See `LICENSE_OR_TERMS.md` and `provenance/asset_provenance.md`. Users are responsible for obtaining upstream datasets and checkpoints from their original sources and following the corresponding license, access terms, and model-card requirements.
+
+## Post-submission author-response addendum
+
+The clearly separated `rebuttal_addendum_20260727/` directory contains the
+author-response artifact additions: seven CIFAR-100 scalar proxy arrays with
+integer-index manifests, DINOv2 multi-budget materials, DDPM full-data-ordering
+materials, attribution, and reproduction scripts. The original artifact scope
+is unchanged; ImageNet-1K arrays are intentionally not redistributed because
+their scalar-only release terms remain unresolved.

@@ -1,0 +1,25 @@
+{
+  "file_count": 18,
+  "files": [
+    "cb_dino_hard_budget0.10_seed0.indices.npy",
+    "cb_dino_hard_budget0.10_seed1.indices.npy",
+    "cb_dino_hard_budget0.10_seed2.indices.npy",
+    "cb_random_budget0.10_seed0.indices.npy",
+    "cb_random_budget0.10_seed1.indices.npy",
+    "cb_random_budget0.10_seed2.indices.npy",
+    "dino_hard_budget0.10.indices.npy",
+    "dino_hard_budget0.30.indices.npy",
+    "dino_hard_budget0.50.indices.npy",
+    "random_budget0.10_seed0.indices.npy",
+    "random_budget0.10_seed1.indices.npy",
+    "random_budget0.10_seed2.indices.npy",
+    "random_budget0.30_seed0.indices.npy",
+    "random_budget0.30_seed1.indices.npy",
+    "random_budget0.30_seed2.indices.npy",
+    "random_budget0.50_seed0.indices.npy",
+    "random_budget0.50_seed1.indices.npy",
+    "random_budget0.50_seed2.indices.npy"
+  ],
+  "content": "integer sample indices only",
+  "sample_id_convention": "canonical CIFAR-100 train index"
+}

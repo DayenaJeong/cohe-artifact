@@ -1,0 +1,40 @@
+{
+  "dataset": "CIFAR-100 train",
+  "dataset_order": "canonical torchvision CIFAR-100 train order; sample_id equals global_index",
+  "proxy": "DINOv2 isolation k20",
+  "model_identifier": "facebook/dinov2-small",
+  "score_definition": "mean cosine distance from each normalized CLS feature to its 20 nearest other normalized CLS features",
+  "score_direction": "higher isolation is harder",
+  "budgets": [0.1, 0.3, 0.5],
+  "seeds": [0, 1, 2],
+  "ordinary_selection": {
+    "hard": "top-k scores by descending score",
+    "random": "RandomState(seed).choice without replacement",
+    "tie_break": "stable sample index order"
+  },
+  "class_balanced_selection": {
+    "evaluated_budget": 0.1,
+    "classes": 100,
+    "samples_per_class": 500,
+    "hard": "top-k within each class by descending score",
+    "random": "RandomState(seed).choice without replacement within each class",
+    "tie_break": "stable sample index order"
+  },
+  "learner": "torchvision ResNet-18",
+  "initialization": "random; weights=None",
+  "epochs": 200,
+  "batch_size": 128,
+  "optimizer": "SGD",
+  "learning_rate": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "schedule": "cosine",
+  "pretrained": false,
+  "source_result_status": {
+    "ordinary_10_percent": "saved aggregate independently audited; no fresh rerun claimed",
+    "ordinary_30_percent": "saved per-seed result",
+    "ordinary_50_percent": "saved per-seed result",
+    "class_balanced_10_percent": "saved per-seed result"
+  },
+  "redistribution_scope": "selection indices and derived scalar results only; no images, paths, features, weights, or checkpoints"
+}

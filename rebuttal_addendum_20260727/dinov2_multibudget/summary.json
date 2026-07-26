@@ -1,0 +1,46 @@
+{
+  "ordinary": {
+    "0.10": {
+      "hard_top1": [11.41, 10.89, 11.33],
+      "random_top1": [26.62, 26.46, 26.78],
+      "paired_delta_pp": [-15.21, -15.57, -15.45],
+      "mean_delta_pp": -15.41,
+      "ci95_pp": [-15.865349964, -14.954650036],
+      "paired_t_pvalue": 0.0000471608900000,
+      "result_source_note": "saved aggregate independently audited; no fresh rerun claimed"
+    },
+    "0.30": {
+      "hard_top1": [26.74, 25.92, 26.70],
+      "random_top1": [44.78, 42.93, 43.18],
+      "paired_delta_pp": [-18.04, -17.01, -16.48],
+      "mean_delta_pp": -17.1766666667,
+      "ci95_pp": [-19.147189758, -15.2061435753],
+      "paired_t_pvalue": 0.00071014965
+    },
+    "0.50": {
+      "hard_top1": [40.24, 40.24, 40.72],
+      "random_top1": [51.64, 51.73, 51.37],
+      "paired_delta_pp": [-11.40, -11.49, -10.65],
+      "mean_delta_pp": -11.18,
+      "ci95_pp": [-12.325669662, -10.034330338],
+      "paired_t_pvalue": 0.00056675231
+    }
+  },
+  "class_balanced": {
+    "0.10": {
+      "hard_top1": [14.67, 13.22, 13.77],
+      "random_top1": [26.13, 24.19, 27.21],
+      "paired_delta_pp": [-11.46, -10.97, -13.44],
+      "mean_delta_pp": -11.9566666667,
+      "ci95_pp": [-15.2053198612, -8.7080134722],
+      "paired_t_pvalue": 0.00396392668,
+      "classes": 100,
+      "samples_per_class": 50
+    }
+  },
+  "reference_match": {
+    "csv_values_match_summary": true,
+    "selection_indices_present": true,
+    "images_or_paths_released": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "text_and_decompressed_manifest_path_violations": [],
+  "files_at_or_above_100MB": [],
+  "released_proxy_array_checks": [
+    {
+      "path": "cifar100_proxy_arrays/arrays/convae_scores.npy",
+      "shape": [
+        50000
+      ],
+      "dtype": "float32",
+      "finite": true
+    },
+    {
+      "path": "cifar100_proxy_arrays/arrays/ddim_scores.npy",
+      "shape": [
+        50000
+      ],
+      "dtype": "float32",
+      "finite": true
+    },
+    {
+      "path": "cifar100_proxy_arrays/arrays/ddpm_scores.npy",
+      "shape": [
+        50000
+      ],
+      "dtype": "float32",
+      "finite": true
+    },
+    {
+      "path": "cifar100_proxy_arrays/arrays/dinov2_scores.npy",
+      "shape": [
+        50000
+      ],
+      "dtype": "float32",
+      "finite": true
+    },
+    {
+      "path": "cifar100_proxy_arrays/arrays/emu3_vq_scores.npy",
+      "shape": [
+        50000
+      ],
+      "dtype": "float32",
+      "finite": true
+    },
+    {
+      "path": "cifar100_proxy_arrays/arrays/sd15_scores.npy",
+      "shape": [
+        50000
+      ],
+      "dtype": "float32",
+      "finite": true
+    },
+    {
+      "path": "cifar100_proxy_arrays/arrays/sdvae_scores.npy",
+      "shape": [
+        50000
+      ],
+      "dtype": "float32",
+      "finite": true
+    }
+  ],
+  "binary_arrays_and_index_files": "checked as numeric arrays; no path-bearing object arrays",
+  "raw_images_weights_check": "PASS: no raw image, weight, checkpoint, latent, feature, or reconstruction files in addendum",
+  "imageNet_assets_check": "PASS: no ImageNet arrays, paths, IDs, filenames, or images in addendum",
+  "note": "The repository root is intentionally preserved except for the short addendum pointer in README.md."
+}

@@ -1,0 +1,29 @@
+{
+  "alignment": "sample_id=global_index=canonical torchvision CIFAR-100 train position; class_index independently checked against local labels; 100 classes x 500 samples",
+  "array_dtype": "float32",
+  "array_sha256": "c7ffeaba16c0c53e23ce15c631c065c70d3196a50be1286f830fd7ca0f15299c",
+  "array_shape": [
+    50000
+  ],
+  "configuration": "batch_size=128; shuffle=False; t=500; one fixed stored score realization; stochastic noise was used during scoring.",
+  "dataset": "CIFAR-100 train",
+  "manifest_fields": [
+    "global_index",
+    "dataset_split",
+    "sample_id",
+    "class_index",
+    "proxy_name"
+  ],
+  "manifest_sha256": "c2cf85a000b840921d4dd84fadbf6177c67e0fa586c31bbb29a981b403fa8049",
+  "model_identifier": "google/ddpm-cifar10-32",
+  "preprocessing": "CIFAR-100 ToTensor followed by Normalize(mean=(0.5,0.5,0.5), std=(0.5,0.5,0.5)); sequential CIFAR-100 train order.",
+  "proxy_name": "DDPM",
+  "redistribution_scope": "scalar derived outputs only; no images, image bytes, filenames, paths, model weights, checkpoints, or latent/reconstruction tensors",
+  "sample_count": 50000,
+  "scalar_definition": "L2 norm of the DDPM UNet predicted-noise tensor after adding Gaussian noise at fixed timestep t=500.",
+  "score_direction": "higher predicted-noise norm = harder",
+  "source_array_sha256": "c7ffeaba16c0c53e23ce15c631c065c70d3196a50be1286f830fd7ca0f15299c",
+  "source_paths_excluded": true,
+  "source_provenance": "Existing Figure-4-linked scalar array; exact local generation rule and canonical positional alignment audited.",
+  "upstream_attribution": "Google DDPM CIFAR-10 model card; Apache-2.0 model metadata; no model files redistributed."
+}

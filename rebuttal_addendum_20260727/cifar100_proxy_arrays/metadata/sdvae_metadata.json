@@ -1,0 +1,29 @@
+{
+  "alignment": "sample_id=global_index=canonical torchvision CIFAR-100 train position; class_index independently checked against local labels; 100 classes x 500 samples",
+  "array_dtype": "float32",
+  "array_sha256": "e774f5e5d1112ba983a4f568c74a7efa097302b5796c01cd7bec0144f7564e17",
+  "array_shape": [
+    50000
+  ],
+  "configuration": "batch_size=512; shuffle=False; deterministic posterior mode; source model identifier as listed.",
+  "dataset": "CIFAR-100 train",
+  "manifest_fields": [
+    "global_index",
+    "dataset_split",
+    "sample_id",
+    "class_index",
+    "proxy_name"
+  ],
+  "manifest_sha256": "e7882bb2987fe436edbc9543df12515131ad9e2816eed7614e446ab5964e59e3",
+  "model_identifier": "stabilityai/sd-vae-ft-mse",
+  "preprocessing": "CIFAR-100 ToTensor followed by Normalize(mean=(0.5,0.5,0.5), std=(0.5,0.5,0.5)); posterior mode; sequential train order.",
+  "proxy_name": "SD-VAE",
+  "redistribution_scope": "scalar derived outputs only; no images, image bytes, filenames, paths, model weights, checkpoints, or latent/reconstruction tensors",
+  "sample_count": 50000,
+  "scalar_definition": "mean((z - z_recon)^2), where z is the AutoencoderKL posterior mode, recon=decode(z), and z_recon=encode(recon).",
+  "score_direction": "higher latent round-trip MSE = harder",
+  "source_array_sha256": "e774f5e5d1112ba983a4f568c74a7efa097302b5796c01cd7bec0144f7564e17",
+  "source_paths_excluded": true,
+  "source_provenance": "Verified local scalar array and source metadata; no VAE weights redistributed.",
+  "upstream_attribution": "stabilityai/sd-vae-ft-mse model card; MIT model metadata; no model files redistributed."
+}

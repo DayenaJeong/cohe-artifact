@@ -1,0 +1,29 @@
+{
+  "alignment": "sample_id=global_index=canonical torchvision CIFAR-100 train position; class_index independently checked against local labels; 100 classes x 500 samples",
+  "array_dtype": "float32",
+  "array_sha256": "6281ef06cbb5209983b0d69cf048c853d542e9cf0c167db83bf38fd9940241da",
+  "array_shape": [
+    50000
+  ],
+  "configuration": "k=20; model source=Hugging Face; no labels used for scoring; score stored as float32.",
+  "dataset": "CIFAR-100 train",
+  "manifest_fields": [
+    "global_index",
+    "dataset_split",
+    "sample_id",
+    "class_index",
+    "proxy_name"
+  ],
+  "manifest_sha256": "bf15f072cbdb181d0a87ff0f62444102162d2d09ea6674bffe9731c4f3176e6a",
+  "model_identifier": "facebook/dinov2-small",
+  "preprocessing": "DINOv2 AutoImageProcessor for facebook/dinov2-small; sequential CIFAR-100 train order; explicit source sample_id alignment.",
+  "proxy_name": "DINOv2",
+  "redistribution_scope": "scalar derived outputs only; no images, image bytes, filenames, paths, model weights, checkpoints, or latent/reconstruction tensors",
+  "sample_count": 50000,
+  "scalar_definition": "Mean cosine distance to the k=20 nearest neighbors of L2-normalized DINOv2 CLS representations, excluding self.",
+  "score_direction": "higher isolation score = harder/more isolated",
+  "source_array_sha256": "361acefcfe6b3fea643a450c1b30b711c709d26c9531ba888e832d6b3483533f",
+  "source_paths_excluded": true,
+  "source_provenance": "Verified source CSV with unique contiguous sample_id=0..49999 and matching scalar .npy cache.",
+  "upstream_attribution": "facebookresearch/dinov2; Apache-2.0 license; no model files redistributed."
+}

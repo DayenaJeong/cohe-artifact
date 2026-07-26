@@ -1,0 +1,29 @@
+{
+  "dataset": "CIFAR-100 train",
+  "sample_count": 50000,
+  "proxy": "DDPM score array released in cifar100_proxy_arrays/arrays/ddpm_scores.npy",
+  "score_direction": "higher predicted-noise L2 is harder",
+  "ordering": {
+    "bins": 10,
+    "bin_size": 5000,
+    "sort_key": "np.lexsort((sample_id, score))",
+    "interpretation": "ascending score order; bin 0 is easiest and bin 9 is hardest",
+    "tie_break": "sample_id ascending"
+  },
+  "shuffled_proxy_control": {
+    "seeds": [0, 1, 2, 3, 4, 5, 6, 7],
+    "assignment": "RandomState(seed).permutation(sample_count) reassigns the score order",
+    "each_sample_used_once_per_epoch": true
+  },
+  "learner": "torchvision ResNet-18",
+  "initialization": "random; weights=None",
+  "optimizer": "SGD",
+  "learning_rate": 0.1,
+  "momentum": 0.9,
+  "weight_decay": 0.0005,
+  "epochs": 200,
+  "optimizer_steps_per_run": 78200,
+  "batch_size": 128,
+  "pretrained": false,
+  "release_scope": "integer-index ordering metadata and derived result table only; no images, paths, weights, checkpoints, or raw logs"
+}

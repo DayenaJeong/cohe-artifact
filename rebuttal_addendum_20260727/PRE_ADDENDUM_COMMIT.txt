@@ -1,0 +1,7 @@
+pre-addendum commit: 4d04b64bf8b3bc26f5dd8ecd8eec5ae3fdbe759b
+work-start UTC: 2026-07-26T23:05:16+00:00
+default branch: main
+
+This file records the local repository state immediately before the author-response
+addendum. It is not claimed to be the exact original submission commit unless
+independently verified.
