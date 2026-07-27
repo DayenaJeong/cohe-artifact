@@ -1,6 +1,6 @@
 # COHE Anonymized Artifact
 
-This artifact accompanies the paper **COHE: Auditing Cross-Objective Transfer of Sample Hardness Proxies**. COHE is an evaluation and reporting protocol for checking whether a task-agnostic hardness proxy supports a stated discriminative claim.
+This artifact accompanies the paper **COHE: Auditing Non-Transitivity in Sample Difficulty Proxies for Vision Models**. COHE is an evaluation and reporting protocol for checking whether a task-agnostic hardness proxy supports a stated discriminative claim.
 
 ## What This Artifact Contains
 
