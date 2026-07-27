@@ -170,3 +170,7 @@ materials remain preserved, and the newly added materials are clearly identified
 as a post-submission author-response addendum. ImageNet-1K arrays are
 intentionally not redistributed because their scalar-only release terms remain
 unresolved.
+
+## Clean five-seed DINOv2 rebuttal addendum (2026-07-28)
+
+The clearly separated rebuttal_addendum_20260728_dinov2_clean_5seed/ directory contains the clean raw-result Ordinary 10% rerun and the finalized four-condition five-seed DINOv2 tables. The earlier rebuttal_addendum_20260727/ directory and its historical records remain preserved. Historical rounded Ordinary 10% seed 0–2 Random values are not used in the clean aggregate.
