@@ -1,0 +1,14 @@
+{
+  "absolute_path_leakage": false,
+  "credentials_or_private_url_leakage": false,
+  "excluded": [
+    "ImageNet images and labels",
+    "full train score array",
+    "upstream VAE weights",
+    "classifier checkpoints",
+    "raw local logs"
+  ],
+  "identity_leakage": false,
+  "pid_or_machine_leakage": false,
+  "status": "PASS"
+}
