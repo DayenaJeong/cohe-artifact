@@ -48,8 +48,7 @@
     "validation_samples": 50000
   },
   "historical_records": {
-    "note": "The old BLOCKED report was generated before the completed score, selection, and training artifacts were available; it is preserved but superseded.",
-    "superseded_blocked_report_backup": "audit/superseded_blocked_20260726"
+    "note": "The earlier local BLOCKED report was superseded after the completed run artifacts became available and is not included in this public addendum."
   },
   "results": {
     "seed_level": [

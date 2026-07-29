@@ -25,5 +25,4 @@ Key source hashes:
 - runner: `090f33ec50a3a4e97e06c8bf0bd387da7ba14cd18b8f36650dc7f1bc9fb31a39`
 - launch pipeline: `6c8e54967749557b3f9c0e1b44658d0d31beed68eff07510b2e8f656593f48e3`
 
-The source-of-truth file is `imagenet1k_gate3_source_of_truth.json`.  The
-old blocked files are preserved under `audit/superseded_blocked_20260726/`.
+The source-of-truth file is `imagenet1k_gate3_source_of_truth.json`. The earlier local BLOCKED report was superseded after the completed run artifacts became available and is not included in this public addendum.

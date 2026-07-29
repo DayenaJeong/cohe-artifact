@@ -9,7 +9,4 @@
   sanitized relative metadata and integer-index manifests.
 - The original ConvAE source array was float64; the released ConvAE array is a
   documented float32 cast and the source checksum is recorded in metadata.
-- DDIM-CLIP is not one of the seven requested families and is not included in
-  this addendum.
-
-No included file is intended to exceed 100 MB.
+- DDIM-CLIP is not among the seven proxy families released in this addendum.

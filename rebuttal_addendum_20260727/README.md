@@ -17,7 +17,7 @@ only a short pointer here.
 - DDPM full-data ordering materials: the eight-seed Easy/Random/Shuffled results,
   the shuffled-proxy control, a privacy-safe bin-membership manifest, configuration,
   and reproduction/verification scripts.
-- Attribution and an OpenReview-ready notice.
+- Attribution.
 
 ## Deliberate exclusions
 

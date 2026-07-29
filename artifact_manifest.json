@@ -14,7 +14,6 @@
     "cached aggregate summaries",
     "paper table index",
     "reproducibility documentation",
-    "OpenReview code-justification snippet",
     "claim-tier guide",
     "FAQ",
     "asset provenance notes",
@@ -32,7 +31,6 @@
   ],
   "included_files": {
     "documentation": [
-      "artifact_openreview_code_justification.txt",
       "docs/REPRODUCIBILITY.md",
       "docs/CLAIM_TIER_GUIDE.md",
       "docs/FAQ.md"
