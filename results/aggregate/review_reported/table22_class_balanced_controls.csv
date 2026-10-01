@@ -1,0 +1,5 @@
+budget,method,method_mean,balanced_random,delta,ci,p_value
+0.1,Balanced Disc-Hard,23.04,26.75,-3.71,"[-4.81,-2.61]",0.0007
+0.1,Balanced Gen-Hard,27.77,26.75,1.02,"[-0.07,2.11]",0.0600
+0.3,Balanced Disc-Hard,40.06,43.54,-3.48,"[-3.69,-3.27]",<0.0001
+0.3,Balanced Gen-Hard,43.84,43.54,0.30,"[-0.18,0.78]",0.1545

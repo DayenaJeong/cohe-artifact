@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the accompanying accepted NeurIPS 2026 paper."
+title: "COHE: Auditing Non-Transitivity in Sample Difficulty Proxies for Vision Models"
+type: software
+authors:
+  - family-names: Jeong
+    given-names: Dayena
+  - family-names: Choi
+    given-names: Sunglok
+repository-code: "https://github.com/DayenaJeong/cohe-artifact"
+url: "https://github.com/DayenaJeong/cohe-artifact"
+preferred-citation:
+  type: conference-paper
+  title: "COHE: Auditing Non-Transitivity in Sample Difficulty Proxies for Vision Models"
+  authors:
+    - family-names: Jeong
+      given-names: Dayena
+    - family-names: Choi
+      given-names: Sunglok
+  year: 2026
+  conference:
+    name: "NeurIPS 2026, Evaluations & Datasets Track"

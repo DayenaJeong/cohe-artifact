@@ -1,0 +1,52 @@
+paper_kind,number,page,label,experiment,release_result,coverage
+figure,1,2,fig:cohe-protocol,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,1,4,tab:cohe,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,2,4,tab:cohe-tier-rules,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,3,4,tab:claim-reclassification,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,4,5,tab:experiment-map,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,5,6,tab:dinov2-gate3-main,dinov2_gate3,experiments/dinov2_gate3/statistics/dinov2_clean_5seed_all_conditions.csv,Mapped
+figure,2,6,fig:dependence,gate1_ddpm; gate1_ddim; gate1_ddim-clip; gate1_sd-vae; gate1_sd-v1.5; gate1_emu3_vq,results/aggregate/review_reported/; archive/review_history/cached_summaries/,Mapped
+figure,3,7,fig:predictive,gate2_single-proxy_linear; gate2_single-proxy_nonlinear; gate2_multi-proxy_nonlinear,results/aggregate/predictive_validity/,Mapped
+figure,4,8,fig:selection-effects,cifar100_main_gate3,results/seed_level/cifar100_main/,Mapped
+table,6,9,tab:cohe-audit-card,dinov2_gate3,experiments/dinov2_gate3/statistics/dinov2_clean_5seed_all_conditions.csv,Mapped
+table,7,13,tab:appendix-experiment-roadmap,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,8,14,tab:appendix-experiment-roadmap-controls,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,9,15,tab:appendix-threshold-worked-example,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,10,15,tab:appendix-threshold-sensitivity,threshold_sensitivity,archive/review_history/cached_summaries/threshold_sensitivity_summary.csv,Mapped
+table,11,16,tab:appendix-framework-comparison,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,12,16,tab:appendix-cohe-checklist,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,13,17,tab:appendix-claim-tiers,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,14,17,tab:appendix-evidence-scope,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,15,18,tab:appendix-proxy-checkpoints,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,16,18,tab:appendix-auxiliary-components,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,17,20,tab:appendix-main-dependence,gate1_ddpm; gate1_ddim; gate1_ddim-clip; gate1_sd-vae; gate1_sd-v1.5; gate1_emu3_vq,results/aggregate/review_reported/; archive/review_history/cached_summaries/,Mapped
+table,18,20,tab:appendix-cifar100-dataset-specific-ae,gate1_convae; convae,results/aggregate/convae/,Mapped
+table,19,20,tab:appendix-dinov2-stress,gate1_dinov2; dinov2_reverse_diagnostic,results/aggregate/dinov2_scalar/; archive/review_history/cached_summaries/dinov2_gate3_diagnostics_summary.csv,Mapped
+table,20,20,tab:appendix-original-corr,original_dependence,archive/review_history/cached_summaries/,Mapped
+table,21,21,tab:appendix-imagenet,gate1_vae; gate1_imagegpt; imagenet10; imagenet1k_vae_gate3; imagenet_scoring_comparison,results/aggregate/review_reported/; archive/review_history/cached_summaries/; results/seed_level/imagenet10/; experiments/imagenet1k_vae_gate3/SEED_LEVEL_RESULTS.csv; results/aggregate/review_reported/,Mapped
+figure,5,21,fig:appendix-emu3,gate1_vae; gate1_imagegpt; imagenet10; imagenet1k_vae_gate3; imagenet_scoring_comparison,results/aggregate/review_reported/; archive/review_history/cached_summaries/; results/seed_level/imagenet10/; experiments/imagenet1k_vae_gate3/SEED_LEVEL_RESULTS.csv; results/aggregate/review_reported/,Mapped
+table,22,21,tab:appendix-hsic,hsic,results/aggregate/hsic_results.json,Mapped
+table,23,21,tab:appendix-predictive-validity,gate2_single-proxy_linear; gate2_single-proxy_nonlinear; gate2_multi-proxy_nonlinear,results/aggregate/predictive_validity/,Mapped
+table,24,22,tab:appendix-dinov2-gate3,dinov2_gate3,experiments/dinov2_gate3/statistics/dinov2_clean_5seed_all_conditions.csv,Mapped
+table,25,22,tab:appendix-dino-seeds,dinov2_gate3,experiments/dinov2_gate3/statistics/dinov2_clean_5seed_all_conditions.csv,Mapped
+table,26,22,tab:appendix-ordering,ddpm_ordering,experiments/ddpm_ordering/per_seed_results.csv,Mapped
+table,27,23,tab:appendix-imagenet-gate3,imagenet1k_vae_gate3,experiments/imagenet1k_vae_gate3/SEED_LEVEL_RESULTS.csv,Mapped
+table,28,23,tab:appendix-selection-effects,cifar100_main_gate3,results/seed_level/cifar100_main/,Mapped
+table,29,23,tab:appendix-second-learner-transfer,cifar100_second_learner,results/seed_level/cifar100_second_learner/,Mapped
+table,30,24,tab:appendix-imagenette-transfer,imagenet10,results/seed_level/imagenet10/,Mapped
+table,31,24,tab:appendix-disc-hard-diagnostics,hard_only_diagnostics,results/aggregate/review_reported/,Mapped
+table,32,24,tab:appendix-alpha-mix,alpha_mix,results/aggregate/alpha_mix_results.json,Mapped
+table,33,24,tab:appendix-balanced,balanced_controls,results/aggregate/cifar100_balanced/,Mapped
+table,34,24,tab:appendix-balanced-diagnostics,balanced_controls,results/aggregate/cifar100_balanced/,Mapped
+figure,6,25,fig:appendix-timestep,timestep,archive/review_history/cached_summaries/,Mapped
+figure,7,25,fig:qualitative,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,35,25,tab:appendix-cross-arch,cross_architecture,archive/review_history/cached_summaries/,Mapped
+table,36,26,tab:appendix-positive-calibration,positive_control,results/aggregate/positive_control/,Mapped
+table,37,26,tab:appendix-shuffled-control,shuffled_control,archive/review_history/cached_summaries/table26_shuffled_proxy.csv,Mapped
+table,38,26,tab:appendix-granularity,label_granularity,results/aggregate/review_reported/,Mapped
+table,39,26,tab:appendix-training-dynamics,training_dynamics,results/aggregate/training_dynamics/,Mapped
+table,40,26,tab:appendix-epochwise,epochwise,results/aggregate/epochwise/,Mapped
+figure,8,27,fig:appendix-epochwise,epochwise,results/aggregate/epochwise/,Mapped
+table,41,27,tab:appendix-artifact-scope,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,42,28,tab:appendix-reproduction-coverage,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted
+table,43,29,tab:appendix-assets,method/provenance table or plotted view; see manuscript,,No separate experimental result asserted

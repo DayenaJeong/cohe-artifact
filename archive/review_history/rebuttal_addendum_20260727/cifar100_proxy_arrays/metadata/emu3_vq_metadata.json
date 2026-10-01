@@ -1,0 +1,29 @@
+{
+  "alignment": "sample_id=global_index=canonical torchvision CIFAR-100 train position; class_index independently checked against local labels; 100 classes x 500 samples",
+  "array_dtype": "float32",
+  "array_sha256": "b3c2b51024231d17f72a004930579fa68f650c9e6336682a131c04cbb7be083a",
+  "array_shape": [
+    50000
+  ],
+  "configuration": "batch_size=16; shuffle=False; four indexed shards; score stored as float32; trust_remote_code required for regeneration.",
+  "dataset": "CIFAR-100 train",
+  "manifest_fields": [
+    "global_index",
+    "dataset_split",
+    "sample_id",
+    "class_index",
+    "proxy_name"
+  ],
+  "manifest_sha256": "f04a80c8a939f116484231d514b2912cd44ea49a127f04fbb9e82ff27fc1c355",
+  "model_identifier": "BAAI/Emu3-VisionTokenizer",
+  "preprocessing": "Pretrained Emu3 processor with fixed 128x128/min-max settings; sequential CIFAR-100 train order.",
+  "proxy_name": "Emu3 VQ",
+  "redistribution_scope": "scalar derived outputs only; no images, image bytes, filenames, paths, model weights, checkpoints, or latent/reconstruction tensors",
+  "sample_count": 50000,
+  "scalar_definition": "Per-sample pixel MSE between the Emu3 VisionTokenizer processor input and decode(encode(x)) reconstruction.",
+  "score_direction": "higher reconstruction MSE = harder",
+  "source_array_sha256": "b3c2b51024231d17f72a004930579fa68f650c9e6336682a131c04cbb7be083a",
+  "source_paths_excluded": true,
+  "source_provenance": "Verified local four-shard scalar array and merge metadata; no Emu3 weights or code redistributed.",
+  "upstream_attribution": "BAAI Emu3-VisionTokenizer model card; Apache-2.0 model metadata; no model files redistributed."
+}

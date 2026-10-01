@@ -1,0 +1,22 @@
+{
+  "dataset": "CIFAR-100 train",
+  "sample_ordering": "torchvision.datasets.CIFAR100(train=True), original order",
+  "model_name": "facebook/dinov2-small",
+  "model_source": "hf",
+  "feature_path": "user_inputs/NeurIPS/results/dinov2_representation_stress/cifar100_dinov2_features.npy",
+  "k": 20,
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "outputs": {
+    "proxy_csv": "user_inputs/NeurIPS/results/dinov2_representation_stress/cifar100_dinov2_proxy.csv",
+    "dependence_csv": "user_inputs/NeurIPS/results/dinov2_representation_stress/cifar100_dinov2_dependence.csv",
+    "predictive_r2_csv": "user_inputs/NeurIPS/results/dinov2_representation_stress/cifar100_dinov2_predictive_r2.csv",
+    "report": "user_inputs/NeurIPS/results/dinov2_representation_stress/REPORT.md"
+  },
+  "skipped_targets": []
+}

@@ -15,7 +15,7 @@ import pandas as pd
 
 def main():
     root = Path(__file__).resolve().parents[1]
-    index_path = root / "cached_summaries" / "paper_table_index.csv"
+    index_path = root / "archive" / "review_history" / "cached_summaries" / "paper_table_index.csv"
     out_path = root / "outputs" / "cached_summary_inventory.md"
 
     if not index_path.exists():
@@ -31,7 +31,7 @@ def main():
     errors = []
     for record in index.to_dict(orient="records"):
         artifact_rel = str(record["artifact_file"])
-        artifact_path = root / artifact_rel
+        artifact_path = root / "archive" / "review_history" / artifact_rel
         if not artifact_path.exists():
             errors.append(f"Missing listed artifact_file: {artifact_rel}")
             continue

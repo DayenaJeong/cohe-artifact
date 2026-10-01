@@ -1,0 +1,29 @@
+{
+  "alignment": "sample_id=global_index=canonical torchvision CIFAR-100 train position; class_index independently checked against local labels; 100 classes x 500 samples",
+  "array_dtype": "float32",
+  "array_sha256": "9ba28caf194edf1e8f4602af8825f77e3cf31615c01a0deef2ff2392acb3b682",
+  "array_shape": [
+    50000
+  ],
+  "configuration": "batch_size=128; shuffle=False; local fixed-t sweep implementation; no fresh rerun claimed in this addendum.",
+  "dataset": "CIFAR-100 train",
+  "manifest_fields": [
+    "global_index",
+    "dataset_split",
+    "sample_id",
+    "class_index",
+    "proxy_name"
+  ],
+  "manifest_sha256": "a91a786a6dce3255cb25bf13b70ccd794d8896fafee200ac390282f1e69178cd",
+  "model_identifier": "google/ddpm-cifar10-32 with DDIMScheduler",
+  "preprocessing": "CIFAR-100 ToTensor mapped to [-1,1]; sequential train order; DDIM scheduler configuration from the local implementation.",
+  "proxy_name": "DDIM",
+  "redistribution_scope": "scalar derived outputs only; no images, image bytes, filenames, paths, model weights, checkpoints, or latent/reconstruction tensors",
+  "sample_count": 50000,
+  "scalar_definition": "Per-sample noise-prediction MSE proxy from the local fixed-t DDIM reconstruction implementation.",
+  "score_direction": "higher noise/reconstruction MSE = harder",
+  "source_array_sha256": "9ba28caf194edf1e8f4602af8825f77e3cf31615c01a0deef2ff2392acb3b682",
+  "source_paths_excluded": true,
+  "source_provenance": "Existing local DDIM scalar array independently audited for shape, finite values, canonical order, and compatibility with the submitted scalar table.",
+  "upstream_attribution": "Google DDPM CIFAR-10 model card; Apache-2.0 model metadata; no model files redistributed."
+}

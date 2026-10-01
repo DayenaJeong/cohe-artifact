@@ -1,0 +1,606 @@
+{
+  "paths": {
+    "gen": "train_d_gen.npy",
+    "disc": "train_d_disc.npy"
+  },
+  "n_total": 50000,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "budgets": [
+    0.1,
+    0.5,
+    0.7
+  ],
+  "K_override": -1,
+  "alphas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "ohs_percentile": 75.0,
+  "train_cfg": {
+    "batch_size": 128,
+    "epochs": 200,
+    "lr": 0.1,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "num_workers": 4,
+    "data_root": "./data",
+    "model_name": "resnet18",
+    "num_classes": 100
+  },
+  "results": [
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Random",
+      "acc": 26.62
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Gen-Hard",
+      "acc": 26.76
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Disc-Hard",
+      "acc": 19.18
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 27.11
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 18.56
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 18.77
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 25.16
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 27.18
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 28.08
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Random",
+      "acc": 26.46
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Gen-Hard",
+      "acc": 27.92
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Disc-Hard",
+      "acc": 18.98
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 27.91
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 18.7
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 19.59
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 24.62
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 27.27
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 27.09
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Random",
+      "acc": 26.78
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Gen-Hard",
+      "acc": 28.29
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Disc-Hard",
+      "acc": 18.81
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 25.94
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 18.48
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 19.63
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 24.35
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 27.01
+    },
+    {
+      "budget": 0.1,
+      "K": 5000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 28.24
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Random",
+      "acc": 51.54
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Gen-Hard",
+      "acc": 51.4
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Disc-Hard",
+      "acc": 45.55
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 50.31
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 45.51
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 46.21
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 49.32
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 50.91
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 50.51
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Random",
+      "acc": 51.05
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Gen-Hard",
+      "acc": 51.14
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Disc-Hard",
+      "acc": 45.15
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 50.2
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 45.49
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 46.2
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 49.17
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 50.17
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 51.2
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Random",
+      "acc": 51.92
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Gen-Hard",
+      "acc": 51.3
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Disc-Hard",
+      "acc": 45.48
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 50.74
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 45.04
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 46.17
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 48.95
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 50.6
+    },
+    {
+      "budget": 0.5,
+      "K": 25000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 50.97
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Random",
+      "acc": 56.07
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Gen-Hard",
+      "acc": 55.62
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Disc-Hard",
+      "acc": 53.22
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 55.59
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 53.58
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 53.5
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 54.99
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 55.47
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 0,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 56.12
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Random",
+      "acc": 56.06
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Gen-Hard",
+      "acc": 56.09
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Disc-Hard",
+      "acc": 52.86
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 56.09
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 52.62
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 53.27
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 54.98
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 56.24
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 1,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 56.17
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Random",
+      "acc": 56.65
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Gen-Hard",
+      "acc": 55.8
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Disc-Hard",
+      "acc": 52.7
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "OHS-XOR(p75)",
+      "acc": 55.83
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.00)",
+      "acc": 52.49
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.25)",
+      "acc": 53.95
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.50)",
+      "acc": 54.72
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=0.75)",
+      "acc": 55.75
+    },
+    {
+      "budget": 0.7,
+      "K": 35000,
+      "seed": 2,
+      "strategy": "Mix-Hard(a=1.00)",
+      "acc": 56.35
+    }
+  ]
+}

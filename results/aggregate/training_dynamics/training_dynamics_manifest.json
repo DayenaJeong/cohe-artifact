@@ -1,0 +1,20 @@
+{
+  "dgen_path": "user_inputs/ICML/train_d_gen.npy",
+  "forgetting_path": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/forgetting_counts.npy",
+  "first_learning_path": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/first_learning_epoch.npy",
+  "dgen_name": "train_d_gen",
+  "epochs": 50,
+  "never_value": 51.0,
+  "split_seeds": [
+    0,
+    1,
+    2
+  ],
+  "outputs": {
+    "correlations_csv": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/training_dynamics_correlations.csv",
+    "nonlinear_per_split_csv": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/training_dynamics_nonlinear_r2_per_split.csv",
+    "nonlinear_summary_csv": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/training_dynamics_nonlinear_r2_summary.csv",
+    "plot_png": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/training_dynamics_plot.png",
+    "summary_md": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/training_dynamics_summary.md"
+  }
+}

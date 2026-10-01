@@ -1,0 +1,42 @@
+{
+  "n": 5,
+  "hard_values": [
+    11.02,
+    10.69,
+    11.28,
+    10.19,
+    10.67
+  ],
+  "random_values": [
+    25.37,
+    24.79,
+    26.48,
+    25.47,
+    26.09
+  ],
+  "delta_values": [
+    -14.350000000000001,
+    -14.1,
+    -15.200000000000001,
+    -15.28,
+    -15.42
+  ],
+  "hard_mean": 10.77,
+  "random_mean": 25.639999999999997,
+  "delta_mean": -14.870000000000001,
+  "delta_sd": 0.6005830500438718,
+  "delta_se": 0.26858890520645107,
+  "ci95": [
+    -15.615722351170888,
+    -14.124277648829114
+  ],
+  "p_value": 6.372585102128682e-07,
+  "min_delta": -15.42,
+  "max_delta": -14.1,
+  "negative_count": 5,
+  "all_delta_negative": true,
+  "condition": "ordinary_10",
+  "budget": 0.1,
+  "provenance": "ALL_RAW_CLEAN_FIVE_SEED; seeds0-2 NEW_RAW_RECOVERED_RUNNER; seeds3-4 EXISTING_RAW_EXTENSION",
+  "historical_rounded_values_used_in_final_aggregate": false
+}

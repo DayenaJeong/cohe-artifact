@@ -24,7 +24,7 @@ def markdown_table(df):
 
 def main():
     root = Path(__file__).resolve().parents[1]
-    index_path = root / "cached_summaries" / "paper_table_index.csv"
+    index_path = root / "archive" / "review_history" / "cached_summaries" / "paper_table_index.csv"
     out_path = root / "outputs" / "rendered_cached_tables.md"
 
     index = pd.read_csv(index_path)
@@ -33,12 +33,12 @@ def main():
     lines = [
         "# Rendered Cached Aggregate Tables",
         "",
-        "These Markdown tables are rendered from anonymized aggregate CSV summaries.",
+        "These tables preserve historical aggregate summaries; final result locations are listed in results/SOURCE_OF_TRUTH.csv.",
         "",
     ]
     for record in index.to_dict(orient="records"):
         artifact_rel = str(record["artifact_file"])
-        artifact_path = root / artifact_rel
+        artifact_path = root / "archive" / "review_history" / artifact_rel
         if not artifact_path.exists():
             continue
         lines.extend([f"## {record['paper_table']}: {record['description']}", "", f"Source: `{artifact_rel}`", ""])

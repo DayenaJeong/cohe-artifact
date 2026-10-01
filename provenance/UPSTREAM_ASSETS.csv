@@ -1,0 +1,10 @@
+model_identifier,role,revision,distribution,terms_note,upstream_url,release_status
+google/ddpm-cifar10-32,DDPM/DDIM,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,Apache-2.0 model-card metadata,https://huggingface.co/google/ddpm-cifar10-32,DO_NOT_REDISTRIBUTE_WEIGHTS
+facebook/dinov2-small,DINOv2,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,Apache-2.0 code/weights stated upstream,https://huggingface.co/facebook/dinov2-small,DO_NOT_REDISTRIBUTE_WEIGHTS
+stabilityai/sd-vae-ft-mse,SD-VAE; VAE ImageNet,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,MIT model-card metadata,https://huggingface.co/stabilityai/sd-vae-ft-mse,DO_NOT_REDISTRIBUTE_WEIGHTS
+runwayml/stable-diffusion-v1-5,SD-v1.5,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,CreativeML OpenRAIL-M historical metadata,https://huggingface.co/runwayml/stable-diffusion-v1-5,DO_NOT_REDISTRIBUTE_WEIGHTS
+OpenCLIP ViT-B/32,DDIM-CLIP,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,MIT code; exact pretrained tag/weight terms unresolved,https://huggingface.co/OpenCLIP ViT-B/32,DO_NOT_REDISTRIBUTE_WEIGHTS
+BAAI/Emu3-VisionTokenizer,Emu3 VQ,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,Apache-2.0 model metadata,https://huggingface.co/BAAI/Emu3-VisionTokenizer,DO_NOT_REDISTRIBUTE_WEIGHTS
+openai/imagegpt-small,ImageGPT,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,Upstream modified MIT vs HF Apache-2.0 metadata discrepancy unresolved,https://huggingface.co/openai/imagegpt-small,DO_NOT_REDISTRIBUTE_WEIGHTS
+torchvision ResNet-18/50,ImageNet scoring/triage/Imagenette fine-tuning,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,BSD-3-Clause code; weight provenance setting-specific,https://github.com/pytorch/vision,DO_NOT_REDISTRIBUTE_WEIGHTS
+ViT-S/16; WRN-50-2,auxiliary target stability,UNKNOWN_UNLESS_RECORDED_IN_EXPERIMENT_METADATA,THIRD_PARTY_POINTER_ONLY,historical exact checkpoint source/training provenance unresolved,https://huggingface.co/ViT-S/16; WRN-50-2,DO_NOT_REDISTRIBUTE_WEIGHTS

@@ -1,0 +1,6 @@
+experiment,authoritative_file,supersedes,verification_command
+dinov2_gate3,experiments/dinov2_gate3/statistics/dinov2_clean_5seed_all_conditions.csv,all prior ordinary10 mixed/rounded records; review three-seed summaries,python scripts/reproduce.py --experiment dinov2_gate3
+ddpm_ordering,experiments/ddpm_ordering/per_seed_results.csv,original three-seed ordering summaries,python scripts/reproduce.py --experiment ddpm_ordering
+imagenet1k_vae_gate3,experiments/imagenet1k_vae_gate3/SEED_LEVEL_RESULTS.csv,timing/pilot/incomplete run outputs,python scripts/reproduce.py --experiment imagenet1k_vae_gate3
+cifar100_main_gate3,results/seed_level/cifar100_main/seed_level_results.csv,earlier three-seed transfer summaries,provided final table arithmetic; no fresh training
+predictive_validity,results/aggregate/predictive_validity/predictive_power_summary.csv,other historical/small-sample predictor outputs,per-split summary cross-check; full rerun needs missing DDIM-CLIP array

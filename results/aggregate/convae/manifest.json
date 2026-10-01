@@ -1,0 +1,27 @@
+{
+  "proxy": "CIFAR-100 ConvAE reconstruction",
+  "score_direction": "higher reconstruction MSE means higher reconstruction hardness",
+  "dataset": "CIFAR-100 train",
+  "config": {
+    "seed": 0,
+    "epochs": 50,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "num_workers": 4,
+    "data_root": "ICML/data"
+  },
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "outputs": [
+    "arrays/cifar100_conv_ae_recon_mse.npy",
+    "dataset_specific_ae_correlation_summary.csv",
+    "dataset_specific_ae_predictive_r2_summary.csv",
+    "dataset_specific_ae_predictive_r2_per_split.csv"
+  ]
+}

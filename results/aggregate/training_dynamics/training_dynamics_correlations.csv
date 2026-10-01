@@ -1,0 +1,3 @@
+metric,display_name,n,pearson_r,pearson_p,spearman_rho,spearman_p,linear_r2_identity,best_model,best_mean_r2,best_std_r2,metric_note
+forgetting_count,Forgetting Count,50000,-0.005294186454216538,0.2364943094558855,-0.006391081743697302,0.15298463572500484,2.802841021200988e-05,MeanPredictor,0.0,0.0,Number of correct-to-incorrect flips across epochs.
+first_learning_epoch,First-Learning Epoch,50000,-0.005634633278674494,0.20769793248887455,-0.004751079672245452,0.28807539545839467,3.1749092185146077e-05,MeanPredictor,0.0,0.0,Samples never stably learned were mapped to epoch 51.

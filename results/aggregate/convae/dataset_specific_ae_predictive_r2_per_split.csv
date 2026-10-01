@@ -1,0 +1,76 @@
+proxy,target,split_seed,model,r2
+CIFAR-100 ConvAE reconstruction,CE loss,0,LinearRegression,0.000479642762067245
+CIFAR-100 ConvAE reconstruction,CE loss,0,RandomForest,-0.0015956569478987603
+CIFAR-100 ConvAE reconstruction,CE loss,0,HistGBDT,0.0005161992511522051
+CIFAR-100 ConvAE reconstruction,CE loss,0,MLP,0.0002719224544894816
+CIFAR-100 ConvAE reconstruction,CE loss,0,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,CE loss,1,LinearRegression,0.00017969957456520635
+CIFAR-100 ConvAE reconstruction,CE loss,1,RandomForest,0.0022489262048500658
+CIFAR-100 ConvAE reconstruction,CE loss,1,HistGBDT,2.5132085293755324e-05
+CIFAR-100 ConvAE reconstruction,CE loss,1,MLP,-0.0013472594656362968
+CIFAR-100 ConvAE reconstruction,CE loss,1,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,CE loss,2,LinearRegression,0.00025546102742035615
+CIFAR-100 ConvAE reconstruction,CE loss,2,RandomForest,-0.006460256242751816
+CIFAR-100 ConvAE reconstruction,CE loss,2,HistGBDT,0.0003040590384832953
+CIFAR-100 ConvAE reconstruction,CE loss,2,MLP,-0.0016332550536695134
+CIFAR-100 ConvAE reconstruction,CE loss,2,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,CE loss,3,LinearRegression,-1.2245923299181172e-05
+CIFAR-100 ConvAE reconstruction,CE loss,3,RandomForest,0.0005540435569999502
+CIFAR-100 ConvAE reconstruction,CE loss,3,HistGBDT,-0.00027758946671574414
+CIFAR-100 ConvAE reconstruction,CE loss,3,MLP,-0.0004481474725779311
+CIFAR-100 ConvAE reconstruction,CE loss,3,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,CE loss,4,LinearRegression,5.6489411967119985e-05
+CIFAR-100 ConvAE reconstruction,CE loss,4,RandomForest,-0.002669430864859601
+CIFAR-100 ConvAE reconstruction,CE loss,4,HistGBDT,-0.00017169173658460046
+CIFAR-100 ConvAE reconstruction,CE loss,4,MLP,-0.005686324770379114
+CIFAR-100 ConvAE reconstruction,CE loss,4,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,Margin hardness,0,LinearRegression,-0.0004730385500979484
+CIFAR-100 ConvAE reconstruction,Margin hardness,0,RandomForest,-0.0014346548727786068
+CIFAR-100 ConvAE reconstruction,Margin hardness,0,HistGBDT,-0.00011237205329250877
+CIFAR-100 ConvAE reconstruction,Margin hardness,0,MLP,-0.002440726343821309
+CIFAR-100 ConvAE reconstruction,Margin hardness,0,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,Margin hardness,1,LinearRegression,-1.1192063875675728e-07
+CIFAR-100 ConvAE reconstruction,Margin hardness,1,RandomForest,-0.0010195109624588916
+CIFAR-100 ConvAE reconstruction,Margin hardness,1,HistGBDT,-4.93992355203865e-05
+CIFAR-100 ConvAE reconstruction,Margin hardness,1,MLP,-0.0007103484549135786
+CIFAR-100 ConvAE reconstruction,Margin hardness,1,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,Margin hardness,2,LinearRegression,0.00022580952632711426
+CIFAR-100 ConvAE reconstruction,Margin hardness,2,RandomForest,-0.0011516242503395446
+CIFAR-100 ConvAE reconstruction,Margin hardness,2,HistGBDT,6.013755013123401e-05
+CIFAR-100 ConvAE reconstruction,Margin hardness,2,MLP,-0.00017020968559400274
+CIFAR-100 ConvAE reconstruction,Margin hardness,2,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,Margin hardness,3,LinearRegression,0.00020518647475664675
+CIFAR-100 ConvAE reconstruction,Margin hardness,3,RandomForest,-0.0014318239498178897
+CIFAR-100 ConvAE reconstruction,Margin hardness,3,HistGBDT,-0.00010394376486910772
+CIFAR-100 ConvAE reconstruction,Margin hardness,3,MLP,-0.0006504203234121153
+CIFAR-100 ConvAE reconstruction,Margin hardness,3,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,Margin hardness,4,LinearRegression,0.00014650738605670455
+CIFAR-100 ConvAE reconstruction,Margin hardness,4,RandomForest,-0.0026856189968440525
+CIFAR-100 ConvAE reconstruction,Margin hardness,4,HistGBDT,-0.00020636771695592415
+CIFAR-100 ConvAE reconstruction,Margin hardness,4,MLP,-0.0007849752645152641
+CIFAR-100 ConvAE reconstruction,Margin hardness,4,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,GradNorm,0,LinearRegression,0.01369645494716265
+CIFAR-100 ConvAE reconstruction,GradNorm,0,RandomForest,0.009852775227459976
+CIFAR-100 ConvAE reconstruction,GradNorm,0,HistGBDT,0.009722866045738465
+CIFAR-100 ConvAE reconstruction,GradNorm,0,MLP,-0.18082896283905514
+CIFAR-100 ConvAE reconstruction,GradNorm,0,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,GradNorm,1,LinearRegression,0.01197471236718839
+CIFAR-100 ConvAE reconstruction,GradNorm,1,RandomForest,0.009885288768288869
+CIFAR-100 ConvAE reconstruction,GradNorm,1,HistGBDT,0.008988247746013034
+CIFAR-100 ConvAE reconstruction,GradNorm,1,MLP,-0.15380576677434732
+CIFAR-100 ConvAE reconstruction,GradNorm,1,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,GradNorm,2,LinearRegression,0.014067639296022727
+CIFAR-100 ConvAE reconstruction,GradNorm,2,RandomForest,0.00492600929021636
+CIFAR-100 ConvAE reconstruction,GradNorm,2,HistGBDT,0.009704434299257603
+CIFAR-100 ConvAE reconstruction,GradNorm,2,MLP,-0.11904245190484075
+CIFAR-100 ConvAE reconstruction,GradNorm,2,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,GradNorm,3,LinearRegression,0.014189675070755414
+CIFAR-100 ConvAE reconstruction,GradNorm,3,RandomForest,0.010000822932834663
+CIFAR-100 ConvAE reconstruction,GradNorm,3,HistGBDT,0.010171749342419045
+CIFAR-100 ConvAE reconstruction,GradNorm,3,MLP,-0.1293710519740987
+CIFAR-100 ConvAE reconstruction,GradNorm,3,MeanPredictor,0.0
+CIFAR-100 ConvAE reconstruction,GradNorm,4,LinearRegression,0.02055146234335603
+CIFAR-100 ConvAE reconstruction,GradNorm,4,RandomForest,0.008196601535669146
+CIFAR-100 ConvAE reconstruction,GradNorm,4,HistGBDT,0.013913573231937648
+CIFAR-100 ConvAE reconstruction,GradNorm,4,MLP,-0.6486722101748323
+CIFAR-100 ConvAE reconstruction,GradNorm,4,MeanPredictor,0.0

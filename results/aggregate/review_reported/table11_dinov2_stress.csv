@@ -1,0 +1,6 @@
+target,pearson_r,spearman_rho,best_r2_mean,best_r2_sd,cohe_reading
+CE loss,-0.1071,-0.2006,0.0108,0.0014,Weak representation-level association; no transfer evidence.
+Margin hardness,0.0692,0.0852,0.0059,0.0010,Weak representation-level association; no transfer evidence.
+GradNorm,0.1104,0.2669,0.0123,0.0032,Target-specific sensitivity relation.
+First-learning epoch,0.4501,0.4363,0.2126,0.0094,Target-specific training-dynamics relation.
+Forgetting count,0.0812,0.0703,0.0359,0.0042,Target-specific training-dynamics relation.

@@ -1,0 +1,29 @@
+{
+  "paths": {
+    "gen": "derived_scalar_arrays/cifar100/arrays/ddpm_scores.npy",
+    "disc": "user_inputs/cifar100_ce.npy"
+  },
+  "n_total_after_clean": 50000,
+  "corrs_on_zscore": {
+    "pearson_r": -9.465180328942701e-05,
+    "pearson_p": 0.9831146262300151,
+    "spearman_rho": -0.0012096477869310155,
+    "spearman_p": 0.7867919207920462
+  },
+  "hsic_rbf_permutation_on_zscore": {
+    "n_used": 5000,
+    "observed_hsic": 2.938370544974173e-05,
+    "p_value": 0.6119402985074627,
+    "null_mean": 3.96459687216904e-05,
+    "null_std": 2.099175105854498e-05,
+    "sigma_x": 0.9674893418642823,
+    "sigma_y": 0.8869098630260335,
+    "n_perm": 200,
+    "seed": 0
+  },
+  "notes": {
+    "hsic_estimator": "biased HSIC with centered Gram matrices; permutation test for dependence",
+    "bandwidth": "median heuristic (fixed from unpermuted data)",
+    "subsample": 5000
+  }
+}

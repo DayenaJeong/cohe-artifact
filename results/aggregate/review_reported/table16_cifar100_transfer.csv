@@ -1,0 +1,7 @@
+method,metric_type,budget_0_1,budget_0_5,budget_0_7,cohe_reading
+Random accuracy,baseline_mean_accuracy,26.71,51.44,56.31,five-seed baseline mean
+Gen-Hard,delta_vs_random,0.93,-0.24,-0.43,positive 0.1-budget point estimate with CI crossing zero; no consistent transfer
+Disc-Hard,delta_vs_random,-7.92,-6.00,-3.26,hard-only selection harmful in this protocol
+Predictive Entropy,delta_vs_random,-6.78,-3.58,-1.84,below Random in this sweep
+Coreset-kCenter,delta_vs_random,-3.58,-0.72,-0.47,below Random except high-budget CI crosses zero
+OHS-XOR diagnostic,delta_vs_random,0.09,-0.85,-0.42,"mixed diagnostic, not a method"
