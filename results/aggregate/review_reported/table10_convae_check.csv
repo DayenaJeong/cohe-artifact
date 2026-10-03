@@ -1,0 +1,4 @@
+target,pearson_r,spearman_rho,linear_r2_mean,linear_r2_ci_low,linear_r2_ci_high,best_r2_mean,best_r2_ci_low,best_r2_ci_high,cohe_reading
+CE loss,0.0150,0.0381,0.00019,0.00002,0.00036,0.00008,-0.00021,0.00037,Effectively no CE-surrogate evidence.
+Margin hardness,-0.0095,-0.0088,0.00002,-0.00023,0.00027,-0.00008,-0.00017,0.00000,Effectively no margin-surrogate evidence.
+GradNorm,-0.1228,-0.2852,0.01490,0.01202,0.01777,0.01050,0.00879,0.01221,Target-specific sensitivity signal.

@@ -1,0 +1,51 @@
+dataset,proxy,target,split_seed,model,r2
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,0,LinearRegression,0.013509779507371977
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,0,HistGBDT,0.012429547536539909
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,1,LinearRegression,0.01017667515599674
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,1,HistGBDT,0.010872614116004264
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,2,LinearRegression,0.010778509198584363
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,2,HistGBDT,0.011617901863887892
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,3,LinearRegression,0.00848508285785643
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,3,HistGBDT,0.008764837534344316
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,4,LinearRegression,0.010969430281155934
+CIFAR-100 train,DINOv2 feature-space isolation,CE loss,4,HistGBDT,0.010263837504687845
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,0,LinearRegression,0.0019739556265677694
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,0,HistGBDT,0.004078934708905635
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,1,LinearRegression,0.004127347497054901
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,1,HistGBDT,0.006287211224892286
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,2,LinearRegression,0.0054925981231130905
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,2,HistGBDT,0.006440276223094732
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,3,LinearRegression,0.0051560013321754194
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,3,HistGBDT,0.006486963942888613
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,4,LinearRegression,0.005561576719160577
+CIFAR-100 train,DINOv2 feature-space isolation,Margin hardness,4,HistGBDT,0.0062645658036843965
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,0,LinearRegression,0.007956016613447248
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,0,HistGBDT,0.006528373943565313
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,1,LinearRegression,0.010801721463024494
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,1,HistGBDT,0.008193959754271618
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,2,LinearRegression,0.013765563273046011
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,2,HistGBDT,0.009699239829934259
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,3,LinearRegression,0.012302225416163437
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,3,HistGBDT,0.008634220315395957
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,4,LinearRegression,0.016527459345703766
+CIFAR-100 train,DINOv2 feature-space isolation,GradNorm,4,HistGBDT,0.010801725151358132
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,0,LinearRegression,0.19535813328406115
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,0,HistGBDT,0.20143125674144324
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,1,LinearRegression,0.2114680011281137
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,1,HistGBDT,0.22180054353962886
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,2,LinearRegression,0.19839675529788847
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,2,HistGBDT,0.20926399019893516
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,3,LinearRegression,0.21347043108852082
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,3,HistGBDT,0.2228710864765081
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,4,LinearRegression,0.1992513547088981
+CIFAR-100 train,DINOv2 feature-space isolation,First-learning epoch,4,HistGBDT,0.20768033630770444
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,0,LinearRegression,0.00672428806410974
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,0,HistGBDT,0.03018015743144642
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,1,LinearRegression,0.008003373881906861
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,1,HistGBDT,0.04169631497583648
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,2,LinearRegression,0.00744544839086847
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,2,HistGBDT,0.034901572001587944
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,3,LinearRegression,0.007478406529699333
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,3,HistGBDT,0.03729862899119285
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,4,LinearRegression,0.0040314192685969585
+CIFAR-100 train,DINOv2 feature-space isolation,Forgetting count,4,HistGBDT,0.03526899176828202

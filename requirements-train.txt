@@ -1,0 +1,6 @@
+-r requirements-cpu.txt
+torch
+torchvision
+timm
+tqdm
+Pillow

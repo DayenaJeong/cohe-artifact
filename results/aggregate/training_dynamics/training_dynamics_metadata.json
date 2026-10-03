@@ -1,0 +1,21 @@
+{
+  "seed": 0,
+  "epochs": 50,
+  "batch_size": 128,
+  "lr": 0.1,
+  "wd": 0.0005,
+  "device": "cuda",
+  "milestones": [
+    33,
+    41
+  ],
+  "best_test_acc": 61.09,
+  "outputs": {
+    "per_sample_dynamics_csv": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/per_sample_dynamics.csv",
+    "forgetting_counts_npy": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/forgetting_counts.npy",
+    "first_learning_epoch_npy": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/first_learning_epoch.npy",
+    "correctness_by_epoch_npy": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/correctness_by_epoch.npy",
+    "epoch_metrics_csv": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/epoch_metrics.csv"
+  },
+  "note": "Correctness is recorded on the training presentation seen in each epoch (with the standard CIFAR-100 augmentation from the existing run_ohs pipeline)."
+}

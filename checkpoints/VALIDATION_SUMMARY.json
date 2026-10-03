@@ -1,0 +1,13 @@
+{
+  "strict_architecture_load_pass": true,
+  "n_assets": 234,
+  "architectures": {
+    "timm_cifar": "timm.create_model(resnet18,pretrained=False,num_classes=100)",
+    "torchvision_cifar": "torchvision.models.resnet18(weights=None,num_classes=100)",
+    "torchvision_imagenet": "torchvision.models.resnet18(weights=None,num_classes=1000)",
+    "convae": "ConvAutoencoder in recovered source"
+  },
+  "no_training_or_dataset_load": true,
+  "torch_test_version": "2.5.1+cu124",
+  "timm_test_version": "1.0.22"
+}

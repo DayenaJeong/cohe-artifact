@@ -1,0 +1,14 @@
+{
+  "correctness_path": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/correctness_by_epoch.npy",
+  "n": 50000,
+  "num_epochs": 50,
+  "proxies": [
+    "DDIM_Main",
+    "SDVAE_Latent",
+    "SD15_LatentDiffusion"
+  ],
+  "outputs": {
+    "csv": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/w2_epochwise/epochwise_dynamics_correlations.csv",
+    "figure_png": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/w2_epochwise/epochwise_dynamics_correlations.png"
+  }
+}

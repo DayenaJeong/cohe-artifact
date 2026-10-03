@@ -1,0 +1,10 @@
+source,method,budget,seed,historical_accuracy,final_authoritative_accuracy
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed1_unbalanced_Gen-Hard.pth,Gen-Hard,0.3,1,43.23,43.73
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed1_unbalanced_Random.pth,Random,0.3,1,43.71,43.23
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed1_unbalanced_Disc-Hard.pth,Disc-Hard,0.3,1,33.29,34.68
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed2_unbalanced_Disc-Hard.pth,Disc-Hard,0.3,2,34.32,34.34
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed0_unbalanced_Random.pth,Random,0.3,0,44.19,44.27
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed0_unbalanced_Gen-Hard.pth,Gen-Hard,0.3,0,44.25,44.13
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed0_unbalanced_Disc-Hard.pth,Disc-Hard,0.3,0,34.42,34.26
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed2_unbalanced_Random.pth,Random,0.3,2,43.42,43.49
+ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/cifar100_budget0.30_K15000_seed2_unbalanced_Gen-Hard.pth,Gen-Hard,0.3,2,43.09,44.12

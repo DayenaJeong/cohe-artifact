@@ -1,0 +1,28 @@
+{
+  "n_seeds": 8,
+  "easy_minus_random": {
+    "mean_pp": -0.77,
+    "sample_sd_pp": 0.52235729425,
+    "standard_error_pp": 0.18468119248,
+    "ci95_pp": [-1.20670162656, -0.33329837344],
+    "paired_t_statistic": -4.16934713,
+    "paired_t_pvalue": 0.00419255984
+  },
+  "shuffled_minus_random": {
+    "mean_pp": -0.5025,
+    "sample_sd_pp": 0.43331776529,
+    "standard_error_pp": 0.15320096512,
+    "ci95_pp": [-0.86476271749, -0.14023728251],
+    "paired_t_statistic": -3.28000545,
+    "paired_t_pvalue": 0.01348695786
+  },
+  "easy_minus_shuffled": {
+    "mean_pp": -0.2675,
+    "sample_sd_pp": 0.66036245459,
+    "standard_error_pp": 0.23347338484,
+    "ci95_pp": [-0.81957682789, 0.28457682789],
+    "paired_t_statistic": -1.14574087,
+    "paired_t_pvalue": 0.28955689398
+  },
+  "interpretation": "The eight-seed table supports a modest ordering effect relative to Random, while Easy and Shuffled are not statistically distinguished by the paired test."
+}

@@ -1,176 +1,93 @@
-# COHE Anonymized Artifact
+# COHE: Auditing Non-Transitivity in Sample Difficulty Proxies for Vision Models
 
-This artifact accompanies the paper **COHE: Auditing Non-Transitivity in Sample Difficulty Proxies for Vision Models**. COHE is an evaluation and reporting protocol for checking whether a task-agnostic hardness proxy supports a stated discriminative claim.
+**Dayena Jeong and Sunglok Choi** · Accepted at **NeurIPS 2026, Evaluations & Datasets Track**.
 
-## What This Artifact Contains
+COHE audits a specified proxy, discriminative target, and downstream protocol through dependence (Gate 1), held-out predictive validity (Gate 2), and operational transfer (Gate 3). It reports bounded claims rather than a universal pass/fail score.
 
-- Stage-wise audit scripts for dependence, held-out prediction, transfer summaries, and claim-card generation.
-- CSV schemas for proxy scores, target scores, split IDs, and transfer results.
-- Toy CSV examples for a smoke test.
-- Selected derived scalar arrays for CIFAR-100 tabular gate checks, including DINOv2 isolation and first-learning targets.
-- Reporting templates for COHE audit cards, claim tiers, and checklist-style reporting.
-- Cached aggregate summaries for paper-style table verification, including DINOv2 Gate 3 accuracy, transfer-delta, diagnostic, and gate-status summaries.
-- Optional DINOv2 Gate 3 runner and aggregator scripts for users with upstream CIFAR-100 data, DINOv2 isolation scores, first-learning targets, and a seed-matched Random baseline.
-- Reviewer-facing reproducibility, claim-tier, and FAQ documentation.
-- Asset provenance and anonymity notes.
+Canonical repository: https://github.com/DayenaJeong/cohe-artifact
 
-## What This Artifact Does Not Contain
+## Release scope and status
 
-This anonymized artifact does not redistribute CIFAR, ImageNet, pretrained checkpoints, model weights, or raw images. Users should obtain upstream assets from their original sources and follow their licenses/model cards.
+This is the official public artifact for the accepted NeurIPS 2026 paper. The fixed camera-ready source and checkpoint release is [`v1.0-neurips2026`](https://github.com/DayenaJeong/cohe-artifact/releases/tag/v1.0-neurips2026). Author-created source code is MIT-licensed; third-party datasets, models, and pretrained weights remain governed by their upstream terms.
 
-It includes selected derived scalar arrays where available, but it does not include private paths, user-specific metadata, full historical training logs, raw upstream datasets, checkpoints, or full scoring/retraining pipelines.
+Included resources comprise lightweight audit interfaces, recovered experiment runners, seven previously released CIFAR-100 proxy arrays with sample-index manifests, selected targets/split IDs, final seed-level and aggregate results, provenance mappings, and CPU statistical verifiers. The exact coverage and gaps are recorded in `PUBLIC_RELEASE_INVENTORY.csv` and `docs/REPRODUCTION_MATRIX.md`.
 
-## Quickstart
+Available in the source tree are audit code, recovered experiment code, derived scalar arrays, seed-level and aggregate results, configurations/manifests, and provenance documentation.
 
-From the artifact root:
+The GitHub Release provides 234 verified author-trained checkpoints in nine archives. Raw CIFAR/ImageNet data, upstream pretrained weights, third-party assets, and unavailable historical checkpoints are not redistributed.
+
+## Reproducibility coverage
+
+| Experiment | Code | Data/scalars | Seed-level results | Checkpoints | Reproduction status |
+| --- | --- | --- | --- | --- | --- |
+| Gate 1 dependence | Audit interfaces and recovered scoring code; some original settings unresolved | Seven CIFAR arrays; selected targets | Provided summaries and available split records | Upstream scoring weights not redistributed | Verification only; full scoring requires upstream inputs |
+| Gate 2 prediction | Linear interface and recovered nonlinear suite | Some inputs supplied; DDIM-CLIP and other targets missing | Five-split records provided | Predictors not packaged | Verification only; full suite needs missing inputs |
+| CIFAR main Gate 3 | Recovered training runners | DDPM supplied; raw CIFAR and CE/order inputs required | 120 final rows | 120 released | Partial; upstream data required |
+| DINOv2 Gate 3 | Recovered selection runner and rank adapters | DINOv2 scalar array supplied; CIFAR and baseline inputs required | All four five-seed conditions | No preserved endpoint weights | Partial; upstream data required |
+| DDPM ordering | Recovered full-data runner | DDPM supplied; raw CIFAR required | All eight paired seeds | 18 of 24 endpoints released | Partial; upstream data required |
+| ImageNet-10 | Recovered fine-tuning and scoring runners | Upstream Imagenette and score inputs required | Three paired seeds at two budgets | No preserved endpoint weights | Partial; upstream data required |
+| ImageNet-1K Gate 3 | VAE scoring, selection and 90-epoch training code | Upstream ImageNet and score/selection inputs required | Five pairs, best/final endpoints | 20 released | Partial; upstream data required |
+| Positive control | Recovered task-aligned retrieval code | Upstream ImageNet/target inputs required | Available split/null summaries | Upstream target weights not redistributed | Partial; upstream data required |
+| Shuffled negative control | Exact sample-wise shuffled-DDIM runner not recovered | Only relevant scalar inputs and summaries supplied | Five-seed summary | No endpoint applicable | Historical code incomplete |
+| Cross-architecture control | Exact historical runner not recovered | Aggregate evidence only | No complete sample-level regeneration inputs | Historical target weights unavailable | Historical code incomplete |
+| Timestep / dynamics diagnostics | Dynamics/epoch analysis code; exact DDPM sweep and calibration provenance partial | Some summaries/curves supplied; full historical targets missing | Available split records only | Diagnostic target endpoints unavailable | Verification only; historical code incomplete |
+
+"Full from released resources" applies to the documented CPU interface/statistical commands, not to every original experiment. Balanced controls add 30 released checkpoints, alpha-mix adds 45, and ConvAE adds one; see `checkpoints/README.md`.
+
+## Installation
+
+Use Python 3.10 or newer for the public CPU interface:
 
 ```bash
+python -m pip install -r requirements-cpu.txt
 bash scripts/smoke_test.sh
 ```
 
-The smoke test runs all stage scripts on toy CSV files, verifies cached aggregate summaries, renders cached tables, and writes outputs under `outputs/`.
+Training/scoring dependencies are separate. The recorded ImageNet environment is in `environment-imagenet.yml`; see `docs/ENVIRONMENTS.md`. Historical versions are documented only where recovered from logs.
 
-## Reviewer Quickstart
-
-```bash
-bash scripts/smoke_test.sh
-python scripts/verify_derived_scalar_arrays.py
-python scripts/verify_cached_summaries.py
-python scripts/render_cached_tables.py
-```
-
-Expected outputs:
-
-- `outputs/smoke_test/stage1_dependence.csv`
-- `outputs/smoke_test/stage2_prediction.csv`
-- `outputs/smoke_test/stage3_transfer.csv`
-- `outputs/smoke_test/cohe_claim_card.md`
-- `outputs/cached_summary_inventory.md`
-- `outputs/rendered_cached_tables.md`
-
-These outputs are generated locally and are excluded from the upload ZIP.
-
-## Derived Scalar Arrays
-
-The `derived_scalar_arrays/` directory contains selected CIFAR-100 train-split scalar arrays with anonymous sample IDs, including DINOv2 isolation, first-learning targets, DDIM reconstruction, CE, margin, GradNorm, and several additional scalar proxies. These are derived tabular outputs only: no images, labels as filenames, local paths, weights, checkpoints, or raw datasets are included.
-
-Reviewers can inspect the release and run one zero-GPU tabular Gate 2 interface check with:
+## Quickstart and the three gates
 
 ```bash
-python3 scripts/verify_derived_scalar_arrays.py
-python3 scripts/run_stage2_prediction.py \
-  --proxy derived_scalar_arrays/cifar100_dinov2_proxy_scores.csv \
-  --target derived_scalar_arrays/cifar100_first_learning_targets.csv \
-  --splits derived_scalar_arrays/cifar100_split_ids.csv \
-  --out outputs/derived_dinov2_first_learning_prediction.csv
+python scripts/reproduce.py --experiment dependence
+python scripts/reproduce.py --experiment predictive_validity
+python scripts/reproduce.py --experiment dinov2_gate3
+python scripts/reproduce.py --experiment ddpm_ordering
+python scripts/reproduce.py --experiment imagenet1k_vae_gate3
+python scripts/reproduce.py --experiment paper_results
 ```
 
-These arrays support zero-GPU tabular verification of gate computations and reported audit summaries where the needed scalar targets are included. Full regeneration of proxy scores or retraining-based Gate 3 transfer results still requires upstream datasets/models and GPU scoring or retraining.
+The first command computes a scalar DDIM/CE dependence check from released values. The second is a univariate linear interface check on released DINOv2/first-learning values, **not** a reproduction of every paper nonlinear model. The Gate 3 commands recompute paired statistics from completed experiment records; they do not retrain models. `paper_results` checks all four final DINOv2 conditions, all eight ordering pairs, and both ImageNet-1K endpoints. Expected results and GPU rerun commands are in `docs/REPRODUCTION_MATRIX.md`.
 
-## Expected Inputs
+Toy examples in `examples/` exercise interfaces and are not experimental evidence. The claim-card generator produces a draft requiring human review; the six final reporting tiers and precedence are documented in `docs/CLAIM_TIER_GUIDE.md`.
 
-COHE operates on sample-indexed CSV files:
+## Datasets and scalar data
 
-- `proxy_scores.csv`: `sample_id,proxy_name,proxy_score`
-- `target_scores.csv`: `sample_id,target_name,target_score`
-- `split_ids.csv`: `sample_id,split`
-- `transfer_results.csv`: `method,budget,seed,accuracy`
+Obtain CIFAR-10/100, Imagenette, and ImageNet-1K from their maintainers and follow their terms. No raw images or upstream archives are redistributed. CIFAR source order is the original torchvision CIFAR-100 training order. The seven released 50,000-entry arrays are DDPM, DDIM, SD-VAE, SD-v1.5, Emu3 VQ, ConvAE, and DINOv2 under `derived_scalar_arrays/cifar100/`; each has an index manifest.
 
-Schema examples are provided in `schemas/`, and runnable toy examples are provided in `examples/`.
+Not all eight primary generative families are released as scalar arrays. ImageNet-1K scalar arrays are intentionally excluded. Target coverage is incomplete for some family/target combinations. Gate 2 covers scalar or low-dimensional inputs; it does not test full underlying representation information.
 
-## Running Individual Stages
+## Upstream pretrained models
 
-```bash
-python3 scripts/run_stage1_dependence.py \
-  --proxy examples/toy_proxy_scores.csv \
-  --target examples/toy_target_scores.csv \
-  --out outputs/stage1_dependence.csv
+Pretrained model identifiers, recovered revisions, unresolved provenance, and terms pointers are in `provenance/UPSTREAM_ASSETS.csv`. Users obtain these weights directly from their owners. A code license does not grant rights to upstream datasets/models.
 
-python3 scripts/run_stage2_prediction.py \
-  --proxy examples/toy_proxy_scores.csv \
-  --target examples/toy_target_scores.csv \
-  --splits examples/toy_split_ids.csv \
-  --out outputs/stage2_prediction.csv
+## Checkpoints
 
-python3 scripts/run_stage3_transfer_summary.py \
-  --transfer examples/toy_transfer_results.csv \
-  --out outputs/stage3_transfer.csv
+`checkpoints/MANIFEST.csv` inventories every checkpoint candidate found in both research projects, including excluded historical candidates. Verified author-trained endpoints have tensor-only exports with original and export checksums. See `checkpoints/README.md` and `docs/RELEASE_PROPOSAL.md`. No checkpoint binary is committed to ordinary Git; the nine archives are hosted only as GitHub Release assets.
 
-python3 scripts/generate_claim_card.py \
-  --stage1 outputs/stage1_dependence.csv \
-  --stage2 outputs/stage2_prediction.csv \
-  --stage3 outputs/stage3_transfer.csv \
-  --out outputs/cohe_claim_card.md
-```
+Canonical counts: 308 original checkpoint-like files; 243 with author-trained COHE-family provenance; 234 technically validated final endpoints released; 74 excluded. The nine-file difference consists of older unbalanced 30% controls with different final accuracies. See `CHECKPOINT_COUNT_RECONCILIATION.md`, `checkpoints/VERIFIED_RELEASE_CANDIDATES.csv`, `checkpoints/RELEASE_ARCHIVES_MANIFEST.csv`, and `RELEASE_APPROVAL_CHECKLIST.md`.
 
-## Reproducing COHE-Style Audit Tables
+## Paper result mapping
 
-For a new proxy, provide sample-indexed proxy and target CSVs, split IDs for held-out prediction, and optional transfer results from a downstream action protocol. The scripts produce compact summaries that can be copied into the reporting templates in `templates/`.
+`PUBLIC_RELEASE_INVENTORY.csv` maps experiments to recovered code, configs, final results, checkpoints, seeds, and limitations. `docs/PAPER_TABLE_FIGURE_MAP.csv` maps the current paper's table and figure labels. `results/SOURCE_OF_TRUTH.csv` identifies authoritative final result locations. `archive/review_history/` preserves earlier records; it must not override final results.
 
-When Stage 3 retraining is infeasible, report only Stage 1 and Stage 2 evidence. Such reports support alignment or predictive-validity wording only; they should not be described as operational transfer evidence.
+## Known limitations
 
-The cached files in `cached_summaries/` are aggregate manuscript summaries. Use:
+Code recovery is partial for historical diagnostics, and some exact historical checkpoint tags remain unresolved. Available training code still needs upstream inputs, GPU compute, and experiment-specific environment validation. Not every trained checkpoint was saved: DINOv2 selection, the ResNet-50 second learner, and the ImageNet-10 fine-tuning runs have no matching saved endpoint weights in the audited directories. Ordering contains only part of the final checkpoint set. Full regeneration is not claimed for every reported block.
 
-```bash
-python3 scripts/verify_cached_summaries.py
-python3 scripts/render_cached_tables.py
-```
+The standalone shuffled-DDIM negative-control runner and cross-architecture runner are incomplete historical recoveries. Some timestep/calibration provenance remains unresolved, and the full predictive suite requires inputs not redistributed here. Completed numerical records remain available independently of checkpoint/code coverage.
 
-to check that the paper-table summaries are present and machine-readable.
+## Licenses and citation
 
-## DINOv2 Gate 3 Audit
+Author-created source code is released under the [MIT License](LICENSE). That license does not apply to or relicense third-party datasets, models, or pretrained weights. Public distribution of the 234 author-trained checkpoints has been approved; see `LICENSE_OR_TERMS.md` and the upstream provenance notes for scope.
 
-The paper's DINOv2 Gate 3 table is represented by aggregate cached files:
-
-- `cached_summaries/dinov2_gate3_transfer_summary.csv`
-- `cached_summaries/dinov2_gate3_accuracy_summary.csv`
-- `cached_summaries/dinov2_gate3_transfer_delta_summary.csv`
-- `cached_summaries/dinov2_gate3_diagnostics_summary.csv`
-- `cached_summaries/dinov2_gate3_gate_status.json`
-
-These files are aggregate summaries only. They do not include CIFAR-100 images, selected indices, checkpoints, or training logs.
-
-Users who want to rerun the full transfer audit can use:
-
-```bash
-PROXY_CSV=user_inputs/cifar100_dinov2_proxy.csv \
-FIRST_LEARNING=user_inputs/first_learning_epoch.npy \
-RANDOM_BASELINE=user_inputs/cifar100_random_seed_level_results.csv \
-DATA_ROOT=user_inputs/cifar100_data_root \
-bash scripts/run_dinov2_gate3_transfer.sh
-```
-
-Full reruns require upstream assets plus optional numerical/training dependencies such as `numpy`, `scipy`, `torch`, and `torchvision`. They are not part of the CPU-only toy smoke test or the minimal `requirements.txt`.
-
-## Documentation Map
-
-- `docs/REPRODUCIBILITY.md`: what can and cannot be reproduced from this lightweight artifact.
-- `docs/CLAIM_TIER_GUIDE.md`: the five COHE claim tiers, permitted wording, and overclaim boundaries.
-- `docs/FAQ.md`: short answers to likely reviewer questions.
-
-## Claim-Tier Note
-
-The generated claim card uses conservative placeholder rules for toy auditing. Final claim-tier assignments should be checked by the user against the full COHE checklist and the intended downstream claim.
-
-## Anonymity Note
-
-The artifact is anonymized for review. It is intended to contain no author names, institutions, local absolute paths, usernames, private URLs, raw datasets, or model weights.
-
-## Asset and License Note
-
-See `LICENSE_OR_TERMS.md` and `provenance/asset_provenance.md`. Users are responsible for obtaining upstream datasets and checkpoints from their original sources and following the corresponding license, access terms, and model-card requirements.
-
-## Post-submission author-response addendum
-
-The clearly separated `rebuttal_addendum_20260727/` directory contains the
-author-response artifact additions: seven CIFAR-100 scalar proxy arrays with
-integer-index manifests, DINOv2 multi-budget materials, DDPM full-data-ordering
-materials, attribution, and reproduction scripts. The previously submitted
-materials remain preserved, and the newly added materials are clearly identified
-as a post-submission author-response addendum. ImageNet-1K arrays are
-intentionally not redistributed because their scalar-only release terms remain
-unresolved.
-
-## Clean five-seed DINOv2 rebuttal addendum (2026-07-28)
-
-The clearly separated rebuttal_addendum_20260728_dinov2_clean_5seed/ directory contains the clean raw-result Ordinary 10% rerun and the finalized four-condition five-seed DINOv2 tables. The earlier rebuttal_addendum_20260727/ directory and its historical records remain preserved. Historical rounded Ordinary 10% seed 0–2 Random values are not used in the clean aggregate.
+Citation metadata is provided in `CITATION.cff`. No DOI or proceedings URL is asserted before those metadata are available.

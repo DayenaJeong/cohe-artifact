@@ -1,0 +1,22 @@
+{
+  "condition": "ordinary_10",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "new_seed_runs": 6,
+  "new_seed_status": "RAW_VALIDATED",
+  "existing_extension_runs": "seed3-4 RAW_VALIDATED_READ_ONLY",
+  "epochs": 200,
+  "eval_epoch": 20,
+  "batch_size": 128,
+  "score_col": "dinov2_isolation_k20",
+  "runner_sha256": "6e3fe70672d72da870a7901d73e34d39f36247ce0d48f29acb9c7dd117d65721",
+  "config_sha256": "34f4b4cc965dd9f53258738e3f7e6fc655a7ae62bb5141479fe50663bedc3a71",
+  "historical_rounded_values_used_in_final_aggregate": false,
+  "pretrained": false,
+  "full_end_to_end_regeneration_claimed": false
+}

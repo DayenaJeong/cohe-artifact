@@ -1,0 +1,33 @@
+{
+  "proxies": {
+    "DDIM_Main": "user_inputs/ICML/outputs_gen/train_d_gen.npy",
+    "DDIM_CLIP": "user_inputs/ICML/outputs_gen/train_d_gen_clip.npy",
+    "SDVAE_Latent": "user_inputs/ICML/rebuttal_2026/exp_latent_proxy/cifar100_sdvae_latent_roundtrip_train.npy",
+    "SD15_LatentDiffusion": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/w1_sd15_cifar100/arrays/sd15_latent_denoise.npy"
+  },
+  "targets": {
+    "CE_Loss": "user_inputs/ICML/outputs/cifar100/ce_train.npy",
+    "Margin_Hardness": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/cifar100_disc_metrics_seed0/margin_hardness.npy",
+    "GradNorm": "user_inputs/ICML/outputs/cifar100/gradnorm_train.npy",
+    "Forgetting_Count": "user_inputs/ICML/rebuttal_2026/exp_training_dynamics/forgetting_counts.npy",
+    "First_Learning_Epoch": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/w5_predictive_power/targets/first_learning_epoch_mapped.npy"
+  },
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "max_train_samples": 30000,
+  "models": [
+    "LinearRegression",
+    "HistGBDT",
+    "MeanPredictor"
+  ],
+  "outputs": {
+    "per_split_csv": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/w5_predictive_power_fast/predictive_power_per_split.csv",
+    "summary_csv": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/w5_predictive_power_fast/predictive_power_summary.csv",
+    "figure_png": "user_inputs/ICML/rebuttal_2026/ttal_full_response/results/w5_predictive_power_fast/predictive_power_summary.png"
+  }
+}

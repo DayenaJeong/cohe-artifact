@@ -1,0 +1,11 @@
+outputs/
+user_inputs/
+__pycache__/
+*.pyc
+.env
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+release_assets/
