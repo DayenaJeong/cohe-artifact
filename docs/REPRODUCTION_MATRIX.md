@@ -1,4 +1,4 @@
-# Public reproduction matrix
+# Reproduction commands
 
 Run commands from the repository root. CPU commands recompute completed-result statistics; training commands are separate and were checked only for parsing/import/configuration, without launching training.
 
@@ -11,7 +11,7 @@ Run commands from the repository root. CPU commands recompute completed-result s
 | Scalar DINOv2/first-learning interface | `python scripts/reproduce.py --experiment predictive_validity` | Writes single linear held-out interface result | Not the full paper nonlinear/multi-proxy fit |
 | Final predictive table | Provided `results/aggregate/predictive_validity/` summary/per-split records | CE multi-proxy R² .0002; margin .0034; first-learning .0459 (rounded) | Original manifest includes DDIM-CLIP, whose array is not released; full rerun requires missing input |
 | CIFAR ResNet-18/50 and ImageNet-10 selection | `results/seed_level/` provides final rows and summaries | Exact reported seeds/budgets | Recovered training runners require user-obtained datasets/scalars; no training was rerun |
-| Other diagnostics | `PUBLIC_RELEASE_INVENTORY.csv` and current table map | Available summaries/source candidates listed individually | Historical exact runner/target checkpoint gaps remain explicit |
+| Other diagnostics | `provenance/release_inventory.csv` and the paper table map | Available summaries/source candidates listed individually | Historical exact runner/target checkpoint gaps remain explicit |
 
 ## GPU commands — explicit user action only
 

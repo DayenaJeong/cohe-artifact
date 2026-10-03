@@ -1,3 +1,5 @@
-# Final dinov2_gate3 experiment package
+# DINOv2 Gate 3
 
-Final numerical records and verifiers are authoritative for this experiment. See the root README, `PUBLIC_RELEASE_INVENTORY.csv`, and `docs/REPRODUCTION_MATRIX.md` for commands and limitations. Historical predecessors live under `archive/review_history/` and do not override these results. No matching trained endpoint checkpoints were retained for the released DINOv2 selection experiments. Final numerical records, selectors, reproduction code, and verification materials remain available.
+This directory contains the selection runners, rank-based adapters, reproduction utilities, and provenance records for the DINOv2 Gate 3 experiments.
+
+No matching trained endpoint checkpoints were retained for these runs. Numerical records for all four five-seed conditions, selectors, code, and verification materials remain available. See [`docs/REPRODUCIBILITY.md`](../../docs/REPRODUCIBILITY.md) for coverage and [`docs/REPRODUCTION_MATRIX.md`](../../docs/REPRODUCTION_MATRIX.md) for commands.
