@@ -21,7 +21,7 @@ The counts refer to different subsets of the same 308 original checkpoint-like f
 
 ## Exact nine-file difference
 
-All nine originate in `ICML/rebuttal_2026/ttal_full_response/results/w3_balanced_control/raw/models/`. The directory name caused a broad balanced-control family classification, but each JSON sidecar explicitly says mode=unbalanced and budget=0.3. Their filenames contain `unbalanced_Random`, `unbalanced_Gen-Hard` or `unbalanced_Disc-Hard`. These are historical reruns of conditions also represented by final main results, not nine extra reported balanced conditions.
+All nine originate in a historical ICML results directory labeled as a balanced-control family. That directory label caused a broad balanced-control classification, but each JSON sidecar explicitly says mode=unbalanced and budget=0.3. Their filenames contain `unbalanced_Random`, `unbalanced_Gen-Hard` or `unbalanced_Disc-Hard`. These are historical reruns of conditions also represented by final main results, not nine extra reported balanced conditions.
 
 | Method | Budget | Seed | Historical accuracy | Final authoritative accuracy |
 | --- | --- | --- | --- | --- |
