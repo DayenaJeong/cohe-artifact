@@ -1,3 +1,5 @@
-# Final imagenet1k_vae_gate3 experiment package
+# ImageNet-1K VAE Gate 3
 
-Final numerical records and verifiers are authoritative for this experiment. See the root README, `PUBLIC_RELEASE_INVENTORY.csv`, and `docs/REPRODUCTION_MATRIX.md` for commands and limitations. Historical predecessors live under `archive/review_history/` and do not override these results. Twenty author-trained ResNet-18 checkpoint endpoints (best/final across five Proxy-Hard and five Random runs) are publicly released in the [`v1.0-neurips2026` GitHub Release](https://github.com/DayenaJeong/cohe-artifact/releases/tag/v1.0-neurips2026). Upstream ImageNet data and VAE weights are not redistributed.
+This directory contains VAE scoring, selection, ResNet-18 training, seed-level results, and statistical verification resources for the ImageNet-1K Gate 3 experiment.
+
+Twenty author-trained ResNet-18 endpoints—best and final checkpoints for five Proxy-Hard and five Random runs—are available in the [`v1.0-neurips2026` GitHub Release](https://github.com/DayenaJeong/cohe-artifact/releases/tag/v1.0-neurips2026). ImageNet data, upstream VAE weights, and the full training score array are not redistributed. See [`docs/REPRODUCIBILITY.md`](../../docs/REPRODUCIBILITY.md) for the broader reproduction scope.
