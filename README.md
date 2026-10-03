@@ -10,6 +10,8 @@ Canonical repository: https://github.com/DayenaJeong/cohe-artifact
 
 This is the official public artifact for the accepted NeurIPS 2026 paper. The fixed camera-ready source and checkpoint release is [`v1.0-neurips2026`](https://github.com/DayenaJeong/cohe-artifact/releases/tag/v1.0-neurips2026). Author-created source code is MIT-licensed; third-party datasets, models, and pretrained weights remain governed by their upstream terms.
 
+`v1.0-neurips2026` is the fixed scientific release snapshot; the current `main` branch includes documentation-only post-release corrections, with no changes to scientific code, reported results, or checkpoint binaries.
+
 Included resources comprise lightweight audit interfaces, recovered experiment runners, seven previously released CIFAR-100 proxy arrays with sample-index manifests, selected targets/split IDs, final seed-level and aggregate results, provenance mappings, and CPU statistical verifiers. The exact coverage and gaps are recorded in `PUBLIC_RELEASE_INVENTORY.csv` and `docs/REPRODUCTION_MATRIX.md`.
 
 Available in the source tree are audit code, recovered experiment code, derived scalar arrays, seed-level and aggregate results, configurations/manifests, and provenance documentation.
