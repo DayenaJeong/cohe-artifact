@@ -2,18 +2,18 @@
 
 ## Author-created code
 
-HUMAN_DECISION_REQUIRED: the existing repository does not identify an intended author-code license. No MIT, Apache, or other grant is inferred. A repository LICENSE can be added after the authors choose one. Code availability and permission to reuse are distinct.
+Author-created source code in this repository is released under the MIT License (SPDX identifier: `MIT`). See the root `LICENSE` file.
 
 ## Author-trained checkpoints
 
-Local candidate assets are tensor-only exports of provenance-verified paper endpoints. No pretrained initialization is redistributed within those exports. Their distribution license and applicable training-data terms still require an author decision. Pending files must not be uploaded simply because provenance and privacy checks pass.
+The GitHub Release distributes 234 provenance-verified, author-trained checkpoints whose public distribution has been approved. The archives contain tensor-only exports; third-party pretrained weights are not bundled. See `checkpoints/README.md`, `checkpoints/VERIFIED_RELEASE_CANDIDATES.csv`, and the release notes for exact coverage and verification details.
 
 ## Derived numerical data
 
-Previously intentionally released CIFAR-100 arrays, sample-index manifests, aggregate results, and seed-level statistics are retained with provenance. No broader license covering all upstream assets is asserted. ImageNet-1K scalar arrays remain excluded pending resolution of their release terms.
+Released CIFAR-100 arrays, sample-index manifests, aggregate results, and seed-level statistics are retained with provenance. ImageNet-1K scalar arrays are not redistributed. Nothing in the repository license grants rights to upstream datasets, models, or weights.
 
 ## Upstream assets
 
-Raw CIFAR/ImageNet/Imagenette images, dataset archives, pretrained weights, model caches, private logs, and credentials are excluded. Obtain upstream assets from their maintainers and comply with their terms. ImageNet's published access conditions restrict database use to non-commercial research/education: https://image-net.org/download.php . This note does not infer a checkpoint distribution license from those conditions. CIFAR source: https://www.cs.toronto.edu/~kriz/cifar.html .
+Raw CIFAR-10/CIFAR-100, ImageNet, and Imagenette images or archives; third-party pretrained weights; model caches; private logs; and credentials are excluded. Obtain upstream assets from their maintainers and comply with their respective licenses, model cards, and access terms. ImageNet access information is at https://image-net.org/download.php and CIFAR is at https://www.cs.toronto.edu/~kriz/cifar.html .
 
-Model code licenses do not alone establish dataset/checkpoint redistribution rights. Historical OpenCLIP/auxiliary target weight provenance and the ImageGPT metadata discrepancy remain unresolved; see `provenance/UPSTREAM_ASSETS.csv`.
+The repository MIT License does not relicense CIFAR, ImageNet, Imagenette, `google/ddpm-cifar10-32`, `facebook/dinov2-small`, `stabilityai/sd-vae-ft-mse`, `runwayml/stable-diffusion-v1-5`, OpenCLIP, `BAAI/Emu3-VisionTokenizer`, `openai/imagegpt-small`, or any other third-party dataset, model, or pretrained weight. Historical OpenCLIP/auxiliary target provenance and the ImageGPT metadata discrepancy remain documented in `provenance/UPSTREAM_ASSETS.csv`.
