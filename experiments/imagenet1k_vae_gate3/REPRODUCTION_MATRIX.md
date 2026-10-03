@@ -7,7 +7,8 @@
 | CPU statistical verification | yes | `reproduction/verify_statistics.py` |
 | protocol and checkpoint rule | yes | `CHECKPOINT_POLICY_AUDIT.md` |
 | score alignment | hashes only | `SCORE_ALIGNMENT.md` |
+| author-trained ResNet-18 checkpoints | yes | 20 best/final endpoints in the `v1.0-neurips2026` GitHub Release |
+| upstream VAE weights | no | obtain `stabilityai/sd-vae-ft-mse` from upstream under its terms |
 | ImageNet images/labels | no | authorized access required |
 | full train score array | no | not redistributed |
-| VAE/classifier checkpoints | no | upstream assets required |
 | raw logs/private paths | no | intentionally excluded |

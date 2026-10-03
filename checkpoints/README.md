@@ -4,9 +4,9 @@
 
 Recovered paper endpoints cover CIFAR-100 main selection, the auxiliary alpha-mix sweep, balanced controls, ConvAE, part of DDPM ordering, and the complete ten-run ImageNet-1K best/final endpoint set. DINOv2 selection, ResNet-50 second-learner, and ImageNet-10 trained endpoint weights were not found; their runners did not retain matching saved weights. Six ordering endpoint files are missing. Do not infer a complete checkpoint release from available result tables.
 
-ImageNet checkpoint bundles embedded author-specific config paths. Proposed exports contain only unchanged model tensors; optimizer/scheduler/scaler/config are excluded. Exact tensor equality was checked using restricted `torch.load(weights_only=True)`. Original research files remain unchanged. Original hashes and release-export hashes are listed in the manifest.
+ImageNet checkpoint bundles embedded author-specific config paths. Released exports contain only unchanged model tensors; optimizer/scheduler/scaler/config are excluded. Exact tensor equality was checked using restricted `torch.load(weights_only=True)`. Original research files remain unchanged. Original hashes and release-export hashes are listed in the manifest.
 
-Hosting: GitHub Release assets on the canonical repository. Tag: `v1.0-neurips2026`; title: `NeurIPS 2026 Camera-Ready Release`. The release includes `SHA256SUMS` and public checkpoint/archive manifests. See `docs/RELEASE_PROPOSAL.md`.
+Hosting: GitHub Release assets on the canonical repository. Tag: `v1.0-neurips2026`; title: `NeurIPS 2026 Camera-Ready Release`. The release includes `SHA256SUMS` and public checkpoint/archive manifests. See `docs/RELEASE_RECORD.md`.
 
 ## Checkpoint coverage
 
