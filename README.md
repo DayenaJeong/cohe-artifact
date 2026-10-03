@@ -72,7 +72,7 @@ Pretrained model identifiers, recovered revisions, unresolved provenance, and te
 
 ## Checkpoints
 
-`checkpoints/MANIFEST.csv` inventories every checkpoint candidate found in both research projects, including excluded historical candidates. Verified author-trained endpoints have tensor-only exports with original and export checksums. See `checkpoints/README.md` and `docs/RELEASE_PROPOSAL.md`. No checkpoint binary is committed to ordinary Git; the nine archives are hosted only as GitHub Release assets.
+`checkpoints/MANIFEST.csv` inventories every checkpoint candidate found in both research projects, including excluded historical candidates. Verified author-trained endpoints have tensor-only exports with original and export checksums. See `checkpoints/README.md` and `docs/RELEASE_RECORD.md`. No checkpoint binary is committed to ordinary Git; the nine archives are hosted only as GitHub Release assets.
 
 Canonical counts: 308 original checkpoint-like files; 243 with author-trained COHE-family provenance; 234 technically validated final endpoints released; 74 excluded. The nine-file difference consists of older unbalanced 30% controls with different final accuracies. See `CHECKPOINT_COUNT_RECONCILIATION.md`, `checkpoints/VERIFIED_RELEASE_CANDIDATES.csv`, `checkpoints/RELEASE_ARCHIVES_MANIFEST.csv`, and `RELEASE_APPROVAL_CHECKLIST.md`.
 

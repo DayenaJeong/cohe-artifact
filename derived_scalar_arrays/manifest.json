@@ -1,6 +1,6 @@
 {
   "component": "derived_scalar_arrays",
-  "version": "review-anonymized-1.2",
+  "version": "v1.0-neurips2026",
   "dataset_scope": "CIFAR-100 train split scalar audit arrays",
   "row_count": 50000,
   "release_policy": "Derived scalar arrays only; no images, file paths, upstream datasets, weights, checkpoints, or retraining logs.",
