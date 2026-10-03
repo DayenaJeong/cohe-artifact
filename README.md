@@ -4,8 +4,6 @@
 
 COHE audits a specified proxy, discriminative target, and downstream protocol through dependence (Gate 1), held-out predictive validity (Gate 2), and operational transfer (Gate 3). It reports bounded claims rather than a universal pass/fail score.
 
-Canonical repository: https://github.com/DayenaJeong/cohe-artifact
-
 This is the official artifact for the accepted NeurIPS 2026 paper. The fixed camera-ready source and checkpoint release is [`v1.0-neurips2026`](https://github.com/DayenaJeong/cohe-artifact/releases/tag/v1.0-neurips2026).
 
 `v1.0-neurips2026` is the fixed scientific release snapshot; the current `main` branch includes documentation-only post-release corrections, with no changes to scientific code, reported results, or checkpoint binaries.
@@ -36,7 +34,7 @@ python scripts/reproduce.py --experiment paper_results
 
 The first command computes a scalar DDIM/CE dependence check from released values. The second is a univariate linear interface check on released DINOv2/first-learning values, **not** a reproduction of every paper nonlinear model. The Gate 3 commands recompute paired statistics from completed experiment records; they do not retrain models. `paper_results` checks all four DINOv2 conditions, all eight ordering pairs, and both ImageNet-1K endpoints.
 
-Toy examples in `examples/` exercise interfaces and are not experimental evidence. The claim-card generator produces a draft requiring human review; the six reporting tiers and precedence are documented in [`docs/CLAIM_TIER_GUIDE.md`](docs/CLAIM_TIER_GUIDE.md).
+Toy examples in `examples/` exercise interfaces and are not experimental evidence. The claim-card script is a reporting aid; the six reporting tiers and their precedence are described in [`docs/CLAIM_TIER_GUIDE.md`](docs/CLAIM_TIER_GUIDE.md).
 
 ## Reproduction and experiments
 
@@ -62,6 +60,6 @@ The standalone shuffled-DDIM negative-control runner and cross-architecture runn
 
 ## Citation and license
 
-Citation metadata is provided in [`CITATION.cff`](CITATION.cff). No DOI or proceedings URL is asserted before those metadata are available.
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff).
 
 Author-created source code is released under the [MIT License](LICENSE). That license does not apply to or relicense third-party datasets, models, or pretrained weights. See [`LICENSE_OR_TERMS.md`](LICENSE_OR_TERMS.md) and the upstream provenance notes for scope.

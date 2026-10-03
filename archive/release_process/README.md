@@ -6,4 +6,5 @@ These files preserve the publication, validation, and paper-update history for `
 - `checkpoint_reconciliation.md`: detailed checkpoint-count reconciliation
 - `command_validation.md`: command-level validation record
 - `validation.md`: post-publication validation record
+- [`requirements_validation.md`](requirements_validation.md): dependency and environment validation record
 - `PAPER_UPDATE_REPORT.md`: manuscript-update history
